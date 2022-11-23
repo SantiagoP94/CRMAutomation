@@ -1,0 +1,337 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="RequestCustomerDetails" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="IN_CompanyList" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="OUT_CompanyData" Type="OutArgument(sd:DataTable)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>648,1220</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>RequestCustomerDetails_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="41">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="53">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="RequestCustomerDetails" sap:VirtualizedContainerService.HintSize="658,1155" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:UiElement" Name="BrowserCrunchbase" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:BuildDataTable DataTable="[OUT_CompanyData]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="596,69" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;CompanyName&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Website&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Facebook&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;LinkedIn&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Twitter&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Activity Feed | Crunchbase" sap:VirtualizedContainerService.HintSize="596,924" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OutUiElement="[BrowserCrunchbase]" ScopeGuid="28a0f012-cfdb-4b89-b4eb-b02b029b9087" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence sap:VirtualizedContainerService.HintSize="562,698" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Sequence to iterate for each customers" sap:VirtualizedContainerService.HintSize="500,443" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,319" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                <TryCatch.Variables>
+                  <Variable x:TypeArguments="x:String" Default="https://www.crunchbase.com/organization/" Name="strCrunchbaseUrl" />
+                  <Variable x:TypeArguments="x:String" Name="strCompanyName" />
+                  <Variable x:TypeArguments="x:String" Name="strFacebook" />
+                  <Variable x:TypeArguments="x:String" Name="strLinkedin" />
+                  <Variable x:TypeArguments="x:String" Name="strTwitter" />
+                  <Variable x:TypeArguments="x:String" Name="strWebsite" />
+                </TryCatch.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <TryCatch.Try>
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Loop through the company names (Clientes nombres del CRM)" DataTable="[IN_CompanyList]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="592,3314" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                    <ui:ForEachRow.Body>
+                      <ActivityAction x:TypeArguments="sd:DataRow">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="558,3157" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="496,71" sap2010:WorkflowViewState.IdRef="Assign_1">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[strCompanyName]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[row(0).ToString.ToLower]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="496,91" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[strCrunchbaseUrl+strCompanyName]" Version="V3" />
+                          <Sequence DisplayName="Web" sap:VirtualizedContainerService.HintSize="496,2791" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[BrowserCrunchbase]" BrowserType="Chrome" DisplayName="Attach Browser 'Uber Crun Page'" sap:VirtualizedContainerService.HintSize="434,2667" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="b40a3bd57389a289452a7a72ed1bf7dc">
+                              <ui:BrowserScope.Body>
+                                <ActivityAction x:TypeArguments="x:Object">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,2511" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Activate 'chrome.exe Uber'" sap:VirtualizedContainerService.HintSize="338,116" sap2010:WorkflowViewState.IdRef="Activate_1">
+                                      <ui:Activate.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="e3c16b2e-79df-4ca3-be9f-4ea5518f0151" InformativeScreenshot="95cb5406bc0bfbd8aaf80910ece8f930">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </ui:Activate.Target>
+                                    </ui:Activate>
+                                    <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="338,32" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+                                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'SPAN'" sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="pgdn" KeyModifiers="None" SpecialKey="True">
+                                      <ui:SendHotkey.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5f1f9a60-c704-41ab-b574-9095b853bb73" InformativeScreenshot="1e801f5ea22c2ca2fce249fe348213c2" Selector="&lt;webctrl parentid='mat-tab-link-0' tag='SPAN' /&gt;">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </ui:SendHotkey.Target>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:SendHotkey>
+                                    <uix:NGetText DisplayName="Get Text 'www.uber.com'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="28a0f012-cfdb-4b89-b4eb-b02b029b9087" TextString="[strWebsite]" Version="V3">
+                                      <uix:NGetText.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://www.crunchbase.com/organization/uber" DesignTimeRectangle="390, 571, 95, 17" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'www.uber.com'" FullSelectorArgument="&lt;webctrl tag='A' aaname='*com ' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='link' tag='A' type='' class='component--field-formatter link-accent ng-star-inserted' /&gt;" Guid="9496ca84-92fb-4fd1-98b0-97b8daf3cd72" InformativeScreenshot="e530261830dd72f4f9684b480aee4fba.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Uber - Crunchbase Company Profile &amp;amp; Funding' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="360, 570, 20, 20" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;chrome&amp;gt;div&amp;gt;mat-sidenav-container&amp;gt;mat-sidenav-content&amp;gt;div&amp;gt;ng-component&amp;gt;entity-v2&amp;gt;page-layout&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;page-centered-layout&amp;gt;div&amp;gt;row-card&amp;gt;div&amp;gt;div&amp;gt;profile-section&amp;gt;section-card&amp;gt;mat-card&amp;gt;div&amp;gt;div&amp;gt;fields-card&amp;gt;ul&amp;gt;li&amp;gt;label-with-icon&amp;gt;theme-icon&amp;gt;icon&amp;gt;svg' idx='5' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='default inherit' tag='svg' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFESURBVEhL5ZMhj4RADIXv12LBYtFYNFgsWCwajUVj0XP5JtfLUDqzk0tObPYlDTC0fe1r58v9Mz6I4DgOt++7N95zkSS4rsvN8+zqunZFUdyMM/7hk0KUgCqrqnok1oZPqiOTgAArWWjLsngry9J/x0geBLQcq7xpGte2rev7/lcaEkNCjCXXg2CaJjM5xoAt0An/idV4EFgDFTvP88frCeIwjRuBaC+6YsiSs5rjOHp/7XcjIBFO27Z5nXlH8xyITFpGk2BdV/8tJJZRRIgsApGIdgUxEj3QLImANayu614SZA0ZyJrSssBaXZINw+ArRlLOstaUyyIXR9rljG3SJBhE+BKTddGAzILAsBM2ShOIae0FJgEgQO4DVTJEnjoxPrHkIEoAaBldrcSc8c+SJUSSIARVsuNYqmKNbIK/4t0JnPsGVcXxgw1WsVcAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NGetText.Target>
+                                    </uix:NGetText>
+                                    <uix:NClick ClickType="Single" DisplayName="Click FB Link" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Right" ScopeIdentifier="28a0f012-cfdb-4b89-b4eb-b02b029b9087" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://www.crunchbase.com/organization/amazon" DesignTimeRectangle="360, 796, 20, 20" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl aaname='View on Facebook' href='http://www.facebook.com/Amazon' tag='A' /&gt;&lt;webctrl tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='View on Facebook' href='http://www.facebook.com/Amazon' tag='A' /&gt;&lt;webctrl tag='svg' type='' class='default inherit' aaname='' /&gt;" Guid="0005a667-622b-45a4-b143-a3bce3b52e3f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFMSURBVEhLxVW7TgJREPW/+AA+QBsrSCx91NTS+gE22FEQaDDR0Eq7hMKExNhgo4Wx4geGnGVnnb2cmcWY1ZOcZLNz7py9M3PvHknD+H+DebaWwWQhF/17aZ/d5cQz3s0X60LlwzV4ffuSbm8srdPbkNBA64EaDCYZTRYRO2LYM6hLfn49zdkhuxs9PhdZvlExwFbTRcrjy6F8fG4Kpchy9U51abkqBuyrlNiZhWeAnliUBpgWtkBpDXo3s3AAkEtRGtTV3hqwuKXVlgZoHBOj9og9PL0Uyp02KifiitIAB4iJ09orvB6AyKX4OwOvRCdXw/xqSEsUNZmWqPEm/2RMWdySjilw6EFjcSVyWFQMoqviUIPwqgCQiC3UZoMsDtZedgrPJCJLDlADAFuNeqKEJi2LhWug2P0ys3y2cYBAPOOdnRYPtQa/RcMGIlv3KRheUbqO4AAAAABJRU5ErkJggg==" InformativeScreenshot="9b81b242b64270ffc9d3ac15469783ac.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon - Crunchbase Company Profile &amp;amp; Funding' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="338,188" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)]e[u(hk)]" Version="V3" />
+                                    <ui:GetFromClipboard TimeoutMS="{x:Null}" DisplayName="Get From Clipboard" sap:VirtualizedContainerService.HintSize="338,32" sap2010:WorkflowViewState.IdRef="GetFromClipboard_1">
+                                      <ui:GetFromClipboard.Result>
+                                        <OutArgument x:TypeArguments="x:String">[strFacebook]</OutArgument>
+                                      </ui:GetFromClipboard.Result>
+                                    </ui:GetFromClipboard>
+                                    <uix:NClick ClickType="Single" DisplayName="Click IN Link" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Right" ScopeIdentifier="28a0f012-cfdb-4b89-b4eb-b02b029b9087" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://www.crunchbase.com/organization/amazon" DesignTimeRectangle="388, 796, 20, 20" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl aaname='View on LinkedIn' href='http://www.linkedin.com/company/amazon' tag='A' /&gt;&lt;webctrl tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='View on LinkedIn' href='http://www.linkedin.com/company/amazon' tag='A' /&gt;&lt;webctrl tag='svg' type='' class='default inherit' aaname='' /&gt;" Guid="9d8d21c7-1bcc-418e-8b1a-b8ed4fd57707" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADtSURBVEhLY/hPYzAMLbj/7tv/A3ffkoVBetEBigUgBQINu/4zlG8lC4P0oluCYsH+u2+waiQFg8xABjgtWH/lBVis//A9FAMIYaItgIHzTz+iGEAIE23BhCP3wYYnrLqIYgAhTLQF5GKiLQCFPYgPiwNkvv/CM2A2CNfvvgXXA8IgMWSA0wKYQpgYjP/+2y8wjQyQLaHYAhCIB8ZLwKIzcMuw6YMBki1ATlXoapDFYIBkC/CpQRaDgWFsASijgUpIEI2Nj0uMaAvIxXgtACU7bJpIwej5BMUCEAApALmCHIwtE2JYQG0w1C34/x8AvQ6FKc7mBj8AAAAASUVORK5CYII=" InformativeScreenshot="57c24514f07eb9e452737a176039a912.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon - Crunchbase Company Profile &amp;amp; Funding' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="338,188" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" Shortcuts="[d(hk)]e[u(hk)]" Version="V3" />
+                                    <ui:GetFromClipboard TimeoutMS="{x:Null}" DisplayName="Get From Clipboard" sap:VirtualizedContainerService.HintSize="338,32" sap2010:WorkflowViewState.IdRef="GetFromClipboard_2">
+                                      <ui:GetFromClipboard.Result>
+                                        <OutArgument x:TypeArguments="x:String">[strLinkedin]</OutArgument>
+                                      </ui:GetFromClipboard.Result>
+                                    </ui:GetFromClipboard>
+                                    <uix:NClick ClickType="Single" DisplayName="Click TW Link" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Right" ScopeIdentifier="28a0f012-cfdb-4b89-b4eb-b02b029b9087" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://www.crunchbase.com/organization/amazon" DesignTimeRectangle="416, 660, 20, 20" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl aaname='View on Twitter' href='http://twitter.com/amazon' tag='A' /&gt;&lt;webctrl tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='View on Twitter' href='http://twitter.com/amazon' tag='A' /&gt;&lt;webctrl tag='svg' type='' class='default inherit' aaname='' /&gt;" Guid="7e436efd-008b-437c-8fb9-4dd14e86c829" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFqSURBVEhLxZStUwMxEMX5J9Gg0aCLRoMG3cEww2BAgEGAQVAMAoWpoFBaYMpHuF+mG/aWzaWUuembeXMf2byX7G6yFFrG4g0u7iehe/MaNs+GYfVgEMk7/xgrIWtwN/gIGydPYXn/oZHEEJuDa9DtvbhiTWRHHn4ZzCMuPLx9m6r8oGbAVr2Jf6FNV81g/bicc7h1/hx3un05it9rR49pjJpoJAM6QoKE1/33sFJ1jf6HqEZ//BlTo2N0dyUDL/dMHk2+0kohphZ6HKIlSAad02EtCO5ejaejIRohztPCzkNLkAxsKqAnZuE1BodR0GhAMUsmXmrREjSmCHo5F2DOau0cN0W5A0bb5e4cW1yhW2TbpvQ2K0GEbtJg5TsZcei2KbAHjVuT4F6VJkx47lWd5aVFiIZGzaD1qwLkajELi5edYB4TTxy4BoCtznL5EWPTopE1EFBkdkRHcYAg7/zLta9G0eC/aNkghG+Wt/fEeaM6FQAAAABJRU5ErkJggg==" InformativeScreenshot="283a313bab525b790685cf7f0cb556f9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon - Crunchbase Company Profile &amp;amp; Funding' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="338,188" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" Shortcuts="[d(hk)]e[u(hk)]" Version="V3" />
+                                    <ui:GetFromClipboard TimeoutMS="{x:Null}" DisplayName="Get From Clipboard" sap:VirtualizedContainerService.HintSize="338,32" sap2010:WorkflowViewState.IdRef="GetFromClipboard_3">
+                                      <ui:GetFromClipboard.Result>
+                                        <OutArgument x:TypeArguments="x:String">[strTwitter]</OutArgument>
+                                      </ui:GetFromClipboard.Result>
+                                    </ui:GetFromClipboard>
+                                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{strCompanyName, strWebsite, strFacebook, strLinkedin, strTwitter}]" DataTable="[OUT_CompanyData]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="338,195" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,101" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Customer details Extracted Successfully for: &quot;+strCompanyName]" />
+                                  </Sequence>
+                                </ActivityAction>
+                              </ui:BrowserScope.Body>
+                            </ui:BrowserScope>
+                          </Sequence>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:ForEachRow.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:ForEachRow>
+                </TryCatch.Try>
+                <TryCatch.Catches>
+                  <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ActivityAction x:TypeArguments="ui:SelectorNotFoundException">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="ui:SelectorNotFoundException" Name="exceptionS" />
+                      </ActivityAction.Argument>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,101" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Error" Message="[&quot;Not able to get the information for Customer: &quot;+strCompanyName + &quot;Due to this Exception: &quot;+exceptionS.Message]" />
+                    </ActivityAction>
+                  </Catch>
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ActivityAction x:TypeArguments="s:Exception">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                      </ActivityAction.Argument>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,101" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Error" Message="[&quot;Not able to get the information for Customer: &quot;+strCompanyName + &quot;Due to this Exception:   &quot;+ exception.Message]" />
+                    </ActivityAction>
+                  </Catch>
+                </TryCatch.Catches>
+              </TryCatch>
+            </Sequence>
+            <uix:NNavigateBrowser Action="CloseTab" DisplayName="Navigate Browser - Close Tab" sap:VirtualizedContainerService.HintSize="500,91" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V3" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN5SURBVGhD7VdpS1VRFO1HNNhgNBfRh6AIwmiAoiAqKAv6FkQE2USDFJhRUlhillqURdHwIbAgSrOUbMCCvjRYaCkEZYoNZmllmr7VXp13edfj8Xl8ILfhbFjweG/tdfY6Z9997uvXfx3wFyPkDAQMZyBoOANBwxkIGs5A0HAGgkbfGxi0Hpi1D1h5DEjMBsZtN/NiRN8bGLYJOHkbaPwGvHoPLD5k5sWIvjcQvxm4cB+/42MzsPSImRcjnIEe4QxEx39ogGNxQQaQWwLcKAcKHwOZ14E5+818k4HZwmVOgeQWiUaOaFGT2iaNKLA3MDAJmLZbFdzeoQryR+tP4FwZMDmlc57fwPdWoPyN4upBzauPgKmpai2/RhTYGRgggotkflfWhVfrJkIh4EE1MH1PJNdvwCYqaoGFmbKmb/0osDMwIRm4U6kKZLAVsm4qU8vkduVF1dqufmOQO2KLyjUZaBMuc3gzU+OwaDWIJoNrlFYA42VNvQ4D7AysPhUp/u0n1cf6DvG7+s+K09QCrDmtvtcNkKM/yNTiRtSKNqND1lqV15nTDewMlDxXwoxdl8zHO3gDkHRWFUuwAPay3wB3/mCh4ur51Ey9rHiMoqddOQbYGWDLMHgKY7aZOUScFMaCCa9IvwG2CXdaz/MwVrS9k+ZJmTga7Ay0yPRgtLT1ftT5Dbz7AsyXcWniEdT2JhTb0MTRYGegql6JMuammznExB3q1ZmYtFPaQmuhZilq7RlzLjHvgOIxOI1MHA12Bo6XhlUl2Jvx8oqsc0bL8ec/BOoagZoGIPmi6mu/AbYHLy9y9XzyeDF6wYtS5xhgZ4A76o05HvEJGYG8cFgInwl+ZpFe/9IAd5O5fgMMcs7LhTdFcphLDebncRSH2+dDEzAjrWsdBtgZ4J+SDLn6f8gzwOCYq5a24mkUP1Oj1QsWkZIfuU11A17USA5zqUEtajL4nKUXqDX1OgywM0CM2gocvRXZZVOwx9k6QzZG8rozYApqZxcDI8OXoAXsDXjgf1u+LrDXG76q1uIFdO8FsCSr63vMUNnJ9GvAk9dA2Usg7QpwV7g8NeZSo1a0yqqAFbmdcy3QewPEcNlVvlEulwX5OpAg/RrXi/FKbsJedSck5gAz5RkzDQYLxGbgD4IzEDScgaDhDAQNZyBoOANB498wEPpDYCqwByD0Cx2GrCXVWN1uAAAAAElFTkSuQmCC" InformativeScreenshot="410964c0c22a50678add26a2141dd243.jpg" Selector="&lt;html app='chrome.exe' title='Activity Feed | Crunchbase' /&gt;" Url="https://www.crunchbase.com/home" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

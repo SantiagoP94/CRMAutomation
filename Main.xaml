@@ -1,0 +1,619 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1230,5886" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="74">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="106">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="816,5821" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="DT_CompanyList" />
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="DT_CompanyData" />
+      <Variable x:TypeArguments="ui:UiElement" Name="BrowserApttivo" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Get Customer List Sequence" sap:VirtualizedContainerService.HintSize="754,183" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch DisplayName="Get Customer List Try Catch" sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <TryCatch.Try>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Home | Apptivo" sap:VirtualizedContainerService.HintSize="434,990" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OutUiElement="[BrowserApttivo]" ScopeGuid="082d6825-a98a-404b-b7f6-4968832acd97" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence sap2010:Annotation.AnnotationText="Obtendremos todos los nombres de los clientes desde esta página usando data scraping" DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,764" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Activate 'chrome.exe Home'" sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Activate_2">
+                    <ui:Activate.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="8ed38293-4b55-48a0-9e41-8825f447ab11" InformativeScreenshot="b5bb3293f3e730ae949c3a70663cf6fb">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Activate.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:Activate>
+                  <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="338,32" sap2010:WorkflowViewState.IdRef="MaximizeWindow_2" />
+                  <uix:NClick ClickType="Single" DisplayName="Click 'CRM'" sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="082d6825-a98a-404b-b7f6-4968832acd97" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.apptivo.com/app/home.jsp#/my-agenda/calendar-view" DesignTimeRectangle="349, 111, 61, 46" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'CRM'" FullSelectorArgument="&lt;webctrl aaname='CRM            ' parentid='link_appsmenu' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='link_appsmenu' tag='A' type='' class='dropdown-toggle ng-binding' /&gt;" Guid="840ca9b5-b023-4909-8fc1-ede9f480337c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEEAAAAyCAYAAAADQbYqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGSSURBVGhD7ZhBboMwEEU5Ui+adXsLbtA9Z6CluyxZRPIGSKbfxjYTYhrqJFVb/khvETODmJexkSiEIUX99i5bp3h6NbJ1KAFQAqAEQAmAEgAlAEoAlAAoAVACoARACYASACUASgCUACgB3CChk6r3H+lcHKWM13pp/OpZ9IPsQs7+OK6Z3tfMa/X9HkumBC9AN+CaCg8+NtLsQ75lrDm03ZTfn+Qwb3Zp/YHkSThreKI0ocmUBCO79jSJc80OUqFG59l7NO3w+yXYB70cY83aSRik1GJcHZqv/4iE2EySsK9nMd8+9ozQDds1m3NFwstH5294Gc/NV8+V5mcmwTV1kqpWOUGCm5DxWpS7YhJSIuxaKvcadz0T7J5fOhPceaBrooRQN6DGi1q5HbSInAkI5ElYfDuEf3v9meBema4WEX6vlGCxInInIJApweJFxNDjnpIAtCgtwedHQd+QcA9ukPB/oARACYASACUASgCUACgBUAKgBEAJgBIAJQBKAJQAKAFQAqAEQAmAEkBhjJFtY+QTNVjbzBU/ZQAAAAAASUVORK5CYII=" InformativeScreenshot="295fe83ac63af81d2a7fbccb73e88176.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home | Apptivo' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="410, 111, 105, 46" ElementType="Text" FriendlyName="'Supply Chain'" FullSelectorArgument="&lt;webctrl aaname='Supply Chain            ' parentid='link_appsmenu' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Supply Chain            ' parentid='link_appsmenu' tag='A' type='' class='dropdown-toggle ng-binding' check:innerText='Supply Chain' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG0AAAAyCAYAAABWIFV0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKJSURBVHhe7ZpJbttAEEV1pFzUa+cWvkH2OoMSZeelFgK40eAOe+TvgaTcpo385DfwAKonVtdTkVpoZ9To2u7w85cRXOy+/RiM4ELSCJE0QiSNEEkjRNIIkTRCJI0QSSNE0giRNEIkjRBJI0TSCJE0QiSNEEkjRNII6ZR2NcfwfwXf7ualOW8LLmZ/Neb42hpboojxejNPcez1nn9+iN44tqdDmk/G+XRJfU+nt7Hns8T1JGsmxiiqS9rfw/ulHW7mbN7M/oD9PkkusW4cBGKCwvV+GCe7Ns17GfvOp9tUHcM17B2l1fLsmpbMTFAC1i/EEeellvYp19/NMc0r8/G5dFTadKhWwlaljS1WgE16lOOu0+HhSwDJcjKSTDunVd1+PlZZRYgD98/iyO5Rx7G0/ivo/yESAo/NH2BkVRqMwdw8WSgIkmXn417NRMH8aixQxJF/GRDcq5T2yHrP8/Eyzm83O9Zas0S/NMQlP1TJmrT0uMnnWmnVO6iU5q79fez8thg/f7XSII4s6S6mvDWlza2f4fvvWpzta81d4/3SbMBVgHCgQpo7EEorhYI03Hf6jNL8fv7dB/sUZPcEkujZpJfC8d4fk2bBiuupsEhHpeFzPuCSj5WWHzSXNq1FUe46iZh5l9ixWAmLSfLrq8qN+z8qLYv349Istrp6KyzS+Xj0SZla/uvJJyj0n+CA7rDwqwsObqWdh3t6NLW/7a3Pc5QxFhU+l/QgyrWxz8XlYtlG2hZs8057lOKwyJSceiyjePz+j3BJC1WwXmX/Nl8rTWyCpBEiaYRIGiGSRoikESJphEgaIZJGiKQRImmESBohkkaIpBEiaYRIGiGSRoikEbIbhsEIJgbzB34Ew4Lqy9TkAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Customers'" sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="082d6825-a98a-404b-b7f6-4968832acd97" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.apptivo.com/app/home.jsp#/my-agenda/calendar-view" DesignTimeRectangle="385, 417, 58, 24" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Customers'" FullSelectorArgument="&lt;webctrl aaname='Customers' class='ng-binding' parentid='link_appsmenu' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Customers' class='ng-binding' parentid='link_appsmenu' tag='SPAN' type='' check:innerText='Customers' /&gt;" Guid="4c92606a-f72b-4c5f-bc6f-d6d6f909d145" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD4AAAAcCAYAAAA5pQx5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF3SURBVFhH7ZNbjoMwDEWHNSKxoIqthKW0C+kHy8jYxgnXDowQnfkYOUfqR4lfJ4+vHJQuHo0uHo0uHo0uHo0D8TWnacjDUH5zfurKLd4pj5/W+AOcuEo/YMzX/Jn8vxA/kXw+hjwuayvB8VOi7WLsTZF4ipz9zZEa7hujtRL1qmsQu9VTZE6Nq/11zmnc402vMae3BhJGnBPNaXt+EF8XalhzWRhFS862EUVC+pXBVWZ+8Z+yiZona1ivSNgbaurp2laP4Brg1oibnfVcFgcwx+ejBMoRZhbIkz5wyjiDPTgn7vi1E2ckX69WbYg5To4y6AaAuKt1Kq499t+2ZnKEg6emXHrj3EwKOvFm9ysghDl+4+T/DfGTw2nFAVffitNnfDOCbAZKuHeoxWzTm2/8grjZLAJrtDPscVIfvJw4o0L1ikAysV81+r7gsHit8G2V7zh4iSsbQlwVZ+Qw2hpWnDiJYw7EY9DFo9HFo9HFo9HFoxFUPOdvxChXUunsbmsAAAAASUVORK5CYII=" InformativeScreenshot="f7a37905cf32aff104b2fefd71be90b4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home | Apptivo' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="360, 417, 20, 20" FriendlyName="'I'" FullSelectorArgument="&lt;webctrl idx='10' parentid='link_appsmenu' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='link_appsmenu' tag='I' class='spt20 appinlblcust1 spt20 fltlft' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFqSURBVEhL7ZQ9UgMxDIU5ByfgBHABbpBcAE4AFyAXyNDRAB0N0NGFCpqECqqko4KOAlhIYMOf2M9ZZSyzf2E2BTO8GY0sW/bTk727IHPGP0EpDEEUf8neVSzN4ydj6yfPbp71WWEIlvcfZXH73vlGcrDvmV9J/KwwBFtnI9noDNNIpN17SUeTNT+uCkPAAdqWtaQtSzsPToHOtS9epX/3kWZXgyHg0DwFzGO0CuLN06EcDcZyE32mGdkwBLuXsbtQNlMxPcdrzEVDEBp5rfORdK7ffjwEQ0A7MK1KFRBTddbhWebDEBz2x65aek1FqoAxG1cPomkReVZIoAd0b99d1bwcPDEb8WUoJOAALhIFmPaWcS0K9MOiVUrGs1QFXHIvGRdZqQIultdA1fr2iWtTgEGCChRAyrhWBZqMAqrXjVXNhyGgBVXeO3k+wnUfhiBMzDN67SNc9zEloDVh4m9N/wDAKJgH/jqByDcEIwJ4LQyNZgAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NExtractData sap2010:Annotation.AnnotationText="Extraemos la lista de datos que tenemos en Apptivo y la enviaremos a CRUNCHBASE.com&#xA;" AppendResults="False" ContinueOnError="True" DataTable="[DT_CompanyList]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Name' ReferenceName='Column0'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="338,223" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="082d6825-a98a-404b-b7f6-4968832acd97" Version="V3">
+                    <uix:NExtractData.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="408, 330, 1401, 136" DesignTimeScaleFactor="1" FriendlyName="'AmazonEdwin PazSalesfor…'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='scrollBodyRows' tableRow='2' tag='DIV' /&gt;" Guid="dc279475-0892-4d20-b1e5-54f8d2dc9688" InformativeScreenshot="e6ce1f29e7254155dec1c00a4b1423ec.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Customers | Apptivo' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                    </uix:NExtractData.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NExtractData>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADPSURBVDhPpdIxDgFBFMbxbRxANnECoZBIVFo3cAE6olFoFVqN2hk0hC0kEoUTOIVCZfWI8X+bnc2YvMJE8dvsfnnf201mI2PMX9QwhBqGiCr7W4gGZtjiios2pGliA+NJtWHfEC/4ZXHQCq4BtKI1lqEOqvDLdWgl64FYBuXhiQQ12AVr+CXXFNkpnJzwjhiSv/NMc0T2Irm08tBaoO1lrh1KKBaILuRcZSDFKr93ndGD7XwtEGWMIMfWxxJzTCBf5M4W1N8zhBqGUMPfmegDpFl/PviNqxsAAAAASUVORK5CYII=" InformativeScreenshot="d9ecabbe3d2ec27bacb655e173ddfc81.jpg" Selector="&lt;html app='chrome.exe' title='*Apptivo*' /&gt;" Url="https://www.apptivo.com/app/home.jsp#/my-agenda/calendar-view" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+        </TryCatch.Try>
+        <TryCatch.Catches>
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="438,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ActivityAction x:TypeArguments="s:Exception">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+              </ActivityAction.Argument>
+              <Sequence sap:VirtualizedContainerService.HintSize="400,90" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,101" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[&quot;Not able to extract customer list. Due to this error:&quot;+exception.Message]" />
+                <TerminateWorkflow DisplayName="Terminate Workflow" Exception="[exception]" sap:VirtualizedContainerService.HintSize="338,130" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1" Reason="Cannot Extract Customer List" />
+              </Sequence>
+            </ActivityAction>
+          </Catch>
+        </TryCatch.Catches>
+      </TryCatch>
+    </Sequence>
+    <Sequence sap2010:Annotation.AnnotationText="Invocamos el workflow con datatable listo e iteramos por cada columna para guardar el valor en variables que usaremos más adelante&#xA;" DisplayName="Request Customer Details Sequence" sap:VirtualizedContainerService.HintSize="754,5476" sap2010:WorkflowViewState.IdRef="Sequence_6">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="RequestCustomerDetails.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="692,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="RequestCustomerDetails.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="IN_CompanyList">[DT_CompanyList]</InArgument>
+          <OutArgument x:TypeArguments="sd:DataTable" x:Key="OUT_CompanyData">[DT_CompanyData]</OutArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <Sequence DisplayName="Update Customer Details Sequence" sap:VirtualizedContainerService.HintSize="692,5150" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="630,5028" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+          <TryCatch.Variables>
+            <Variable x:TypeArguments="x:String" Name="strCompanyName" />
+            <Variable x:TypeArguments="x:String" Name="strWebsite" />
+            <Variable x:TypeArguments="x:String" Name="strFacebook" />
+            <Variable x:TypeArguments="x:String" Name="strLinkedIn" />
+            <Variable x:TypeArguments="x:String" Name="strTwitter" />
+          </TryCatch.Variables>
+          <TryCatch.Try>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_CompanyData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="592,4747" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="558,4622" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="496,234" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                      <ui:MultipleAssign.AssignOperations>
+                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[strCompanyName]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[row(0).ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[strWebsite]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[row("Website").ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[strFacebook]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[row("Facebook").ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[strLinkedIn]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[row(3).ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[strTwitter]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[row(4).ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                        </scg:List>
+                      </ui:MultipleAssign.AssignOperations>
+                    </ui:MultipleAssign>
+                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Customers | Apptivo" sap:VirtualizedContainerService.HintSize="496,4226" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" ScopeGuid="a6d10b5a-3d32-4177-bfde-820035e30d81" Version="V2">
+                      <uix:NApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="462,4000" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'A'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="400,263" sap2010:WorkflowViewState.IdRef="NTypeInto_13" ScopeIdentifier="a6d10b5a-3d32-4177-bfde-820035e30d81" Text="[strCompanyName]" Version="V3">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.apptivo.com/app/customers.jsp#/dashboard/show-all/" DesignTimeRectangle="1015, 166, 253, 25" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT text-search'" FullSelectorArgument="&lt;webctrl id='text-search' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='text-search' tag='INPUT' type='text' class='advsearchinput1 bxsdw fltlft brdnone form-control input-sm ng-pristine ng-untouched ng-valid ng-empty' aaname='' /&gt;" Guid="da8033c4-f620-4072-9322-e37760eba755" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQEAAAAdCAYAAACqj9mpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK+SURBVHhe7Za9keswDISv/w7cgBrwXAdy5twVOLmLHetEgD8LSPTTSEr8sN8MAokkSHC4S369Xq+JwWDEDTGB+/3OYDCCRjUBQkgMkt6fz2cNmgAhwaAJEBIcmgAhwaEJEBIcmgAhwaEJEBIcmgAhwflQE/idxuEyXR/58588puvlMl1KDOOc4QA/4zRcrnNWQj6fACagBjDcmux/b8MxI6AJkP+IU0zg8Q237DdIQ8RS2qxoRIi1bZjGH/kr4h4GbSsix/z6L5vAreVHkSPrggcT8YJ+XKG/9itz6xz4qsjjenXmXGNd/9wGfc2aU9+Sw81v9gP7uT0lZA/HTWAhmiJoFYsRcuknB7kdYGkT88iiAyMREZfvKtjcz+Qr8yJZRB2DEN6YgJlb6sn9zBj70ljWaY2r1o17IPmsEa7vR5qr1ZnW97Y2QjZwsgkAeMgTXmxAE5sXrX4XI2n4flYcjd54YLMJADjGj0dBuz1IBlHXDONkHtzDuoatdRKyn+MmMCOHOD9R64EVAei/Fu62wzYwgSZavWV7JmD79U2giWiFNyYgn/UpD/PhGCd0s5aVXF0TKPtQI7X5OmdkXO6DxkHITk4xgQYcWicAxN987cb1h35FBIL/378hF7dsJglSxjsT6PU3c+AYN16/d5jA2oujW7/SH0fIdg6bgD2I6dAWMdpbXPrhoa/i0H7rJqDCqfmrwLabQMmPrwFci+YsuTRvWZsRreRZE77NL+sttW00gVaXtEAOV6eZV+vAugjZwwkvgSycJGQntiIwbUORZuFLzIe6imVpAj4/inWbCSRwvjxnbkmoKaT/c44bCteOs/NBHlMn5N5qAonUd5FjuR9trXNAbkL2coIJEEI+GZoAIcGhCRASHJoAIcGhCRASHJoAIcGhCRASHJoAIcHpmgCDwYgZYgIMBiNqvKY/2jEGcRrkAtQAAAAASUVORK5CYII=" InformativeScreenshot="600ca9951df6296b16c4ac2336fc1b46.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Customers | Apptivo' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <uix:Target DesignTimeRectangle="1300, 165, 48, 26" FriendlyName="'A'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;section&amp;gt;customers-app-header&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;div&amp;gt;a' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='A' class='btn btn-primary wd50 chkcenter cmnadvsrchres advsrchresult ng-pristine ng-untouched ng-valid ng-empty' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADQAAAAeCAYAAABjTz27AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIbSURBVFhH3Zg7TwJBEMf9SH4LX9j4ao0l2GphpVYoiGDURC2UwsTEqJWaEBusTCiopNFCNCSaGNGDXU58jTu3dzzCzXncqXEt/vnv7Mw+fhm4Yjs45/Cf9D+BGGPQOfWgtJChBlQqlYzJ/sSHksK7I0MNSNM0YzIQf2/QmzIx3h0ZWoD6jaI34XKBKjEJFIi/QmBRSDF3BrJkLVAgJoH6Fl/qijWM/3hMd8gskF4l/Ov8yEoVjrI63D9WjENQV3ccZg+qrta3m6c7FBMHxp59+fCyDrmbigETPdRhPKnD5M4zpHMSDufc7NOOOwBhkT8lT2Vnxjbsc3ieXc6PSKDeBd238uKntXtWsc2hML96Yp/zKrpDZoEfx/1m9un8cbYiOiWB7fJe3KFD4qAoHobOPcW4n3FhIp+5cM57iZ2BFqxCwr/Ip8/lF21oqTUfSkpgdGq9l/NJoJ4oqyvSMG4jDm4x8VHgkLnkMLpez09sM7i65eJzzpvqa/IR0x0yC/x6SEDhnx/3RggExDHO4RjzbvZx63SHIuVv1fQeg600g9UUg9E1BoOJMuSuJVRw036NF7kEKv1ITEN5358E6p7XfkUDcU1AMVhJlW3z7YrukFmgmjt06Am654QUc2cgS9YCBWISqGvuUagoPWy6AjHdIaO4qJzTHQqrKRJIZTUB4SNdoVCAfD6vpPDuTQ+N+IyKE0ipovDu8imYwyd+dU2wwegw+gAAAABJRU5ErkJggg==" SearchSteps="Selector" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NTypeInto.Target>
+                              <uix:NTypeInto.VerifyOptions>
+                                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                    <InArgument x:TypeArguments="x:Boolean" />
+                                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                    <InArgument x:TypeArguments="x:Double" />
+                                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                </uix:VerifyExecutionTypeIntoOptions>
+                              </uix:NTypeInto.VerifyOptions>
+                            </uix:NTypeInto>
+                            <uix:NClick ClickType="Single" DisplayName="Click 'Buscar'" sap:VirtualizedContainerService.HintSize="400,202" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6d10b5a-3d32-4177-bfde-820035e30d81" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.apptivo.com/app/customers.jsp#/dashboard/show-all/" DesignTimeRectangle="1854, 165, 48, 26" DesignTimeScaleFactor="1" FriendlyName="'A'" FullSelectorArgument="&lt;webctrl tag='A' idx='96' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='A' type='' class='btn btn-primary wd50 chkcenter cmnadvsrchres advsrchresult ng-pristine ng-untouched ng-valid ng-empty' aaname='' /&gt;" Guid="1e456bf1-ad95-4317-828c-93b22951b4fe" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADQAAAAeCAYAAABjTz27AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIlSURBVFhH3ZjNLwNBGMb9Sf4LH20viqs44srBCSelqhUkOGgvIhGckIhLnSRNOOmFg5ImJOJjtzNd9fWad3aXtN23ZrsixuHJ03eed2fml7ftYVs45/Cf9D+BGGPQOnqntZDhE8g0TbkYSb1rKbw7MnwCGYYhF8PJN6FXx139/Rrvjgx1QBGnISIfQtejJoHCyRcIzwpp5mpArjSoSaDQ7DOEEkLorjSo6QnJpgrhz8p570IFdk8suH0oy0NQFzccJrYrSs/7zekJJcSBiadA3jNvQf6qLGHiOxYMZSwYWX+CbN6GwzWVffx4AyBsCqbMoT2Z/hXvDM/zyoKIBOqcsQKrIL5aG0dlzwyF+eKBd9as6Ak5DUEc9xvfovO9k7KYlA3slTfjDSYkDopzx/FQ/zXuJy9M5LmzxnkztSJQjc8Q6zV59tT+R+ueq88HMzYwOvV83bpCTgJ1xBl0TAuhu/JZD6wy8afAIXfOoW/5Kx9eY3BxzWH3mFf1Bz0Pa3pCTlNQH0wz+ePHvRECAfEzruFnzFX2UXV6QtOlH9XYJoN0lsHiPoO+JQbRVAnylzbUwKr3M83oGyCzqvmn62jKrIEKvj8J1D5l/Iq6koaAYrCwX/LM/YqekNOgmzeY0CO0x4Q0czUgVxrUJFBb7AHaJu9tjzmuQU1PSDbda+f0hCb1FAmks6qA8CVdsViEQqGgpfDuVS8a8TUqLiCljsK726+COXwAH5RNqEeGf3UAAAAASUVORK5CYII=" InformativeScreenshot="7d8966b444d40256bfd396cb0e3f44d9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Customers | Apptivo' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <uix:Target DesignTimeRectangle="1567, 159, 282, 39" ElementType="ListItem" FriendlyName="'LI'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;section&amp;gt;customers-app-header&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li' idx='5' tag='LI' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='pdlft0 pdrgt0 posrel mgntp1 hdr2tprgtsrchicn' tag='LI' aaname='                        ' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAR4AAAArCAYAAACuCed8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOaSURBVHhe7ZlNTiMxEEY5EhJrOAVX4QIcAikX6AtEbGfV2UVsI7FnA+use9rlv7K7mzhNqBlm3pM+ocR2ud2aehjN1fWv40AIIZa5Oh6PAyGEWAbxEELMg3gIIeZBPIQQ8yAeQoh5EA8hxDyIhxBinkI8+/2eEEK+Jdo1E/EAwP+B6/e3tzeTIB4AEBAPAJiDeADAHMQDAOYgHgAwB/EAgDmIBwDMQTzNfAx9txm2h/DxJIdhu9kMm5iuHyt8gfd+6DbbsSrAzwfxNHOOeLx0ul1Wzceu+5p8EA/8Q5wSz+vr6/D4+Cg/58Zdnp6ehr7vZ8d0Liqew7O6TTyrdpQGjWNlo0rzp7Fu6N/lWxFK1/mxKBZd338XxLPL9bVYNPOSUeKqJXLYqvl+Xtzb76FvT2Hd0jlDrT49/zim5hbP7ObGGtX+xfvQ86p3CrCGU+K5v78fbm5u5OecfB4eHmT87u5ueHl5mYzrXE48k0aNEvENWsgjzpPmyU0jYyKs0OhKXiKO+DlJIswr6sV9NaFxF6QkfCKeYm85T5hXrClvVNNzlrJM59bvQOqV8p1/H26vfE73fJ+eDaCBU+KJYpmTjx67vb39U+JR6MZy1A2uyA1ei8J/jvLK1PPKhswsrVc0i0eh19TrtUSqd+CklJ5ZrZN99DtMz9B6ToD1nBKPy5x8aumY/6kljROu/6lJpOn8dznVb3U9psSTReFvE0viKectiyc37gyfiEc+pj+T1H56TSWX4llmai2KJ76HFDdWn3NE1oU5WlYAK2kRj4sWjfuz6lzpuFxUPBnVKFXTaerf8PlmUTfaTOMJ9ffLN4HJbSLgJCDrK/EszS/20Guq9f7zCvHM3awWz+9ZXgfQTqt4XLR8zpWOy8XEU/7jd40SBVDeVmSebrTUkH7evHh8s6b6qanbxRPr61uPfhZfM9bydeOzFaKQOnOyKevL88azNYonn0tGVI3qnMW+/hz6XABrOEc8LlE+50rH5WLiSc3q5FE1eGxqP6bFEGQjGRspNehUPHV9LYg28Tj0fmHPMOLwInLfjzV2WhblunI/Vac4p6rdKh6HmzupMX0f+VnHqNoAazlXPC6t/31e54LiAYCfzBrxrA3iAQAB8QCAOYgHAMxBPABgDuIBAHMQDwCYg3gAwJy/SjyEEPId0a4pxEMIIRZBPIQQ8yAeQoh5EA8hxDyIhxBiHsRDCDEP4iGEmAfxEEKMcxx+A3WzR5crQDIkAAAAAElFTkSuQmCC" SearchSteps="Selector" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NClick.Target>
+                              <uix:NClick.VerifyOptions>
+                                <uix:VerifyExecutionOptions DisplayName="Verification target" Mode="Appears">
+                                  <uix:VerifyExecutionOptions.Retry>
+                                    <InArgument x:TypeArguments="x:Boolean" />
+                                  </uix:VerifyExecutionOptions.Retry>
+                                  <uix:VerifyExecutionOptions.Timeout>
+                                    <InArgument x:TypeArguments="x:Double" />
+                                  </uix:VerifyExecutionOptions.Timeout>
+                                </uix:VerifyExecutionOptions>
+                              </uix:NClick.VerifyOptions>
+                            </uix:NClick>
+                            <uix:NClick ClickType="Double" DisplayName="Click 'Name'" sap:VirtualizedContainerService.HintSize="400,166" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6d10b5a-3d32-4177-bfde-820035e30d81" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.apptivo.com/app/customers.jsp#/search?searchText=salesforce" DesignTimeRectangle="316, 330, 251, 34" DesignTimeScaleFactor="1" FriendlyName="'Salesforce'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl css-selector='body&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ui-view&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='scrollBodyRows' tableRow='2' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' parentid='scrollBodyRows' class=' cssTableCell hasTemplate cust_name_attr' tag='DIV' aaname='' check:innerText='Salesforce' /&gt;" Guid="fa233caf-262a-4225-b43c-626c62740cdd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAP8AAAAmCAYAAAALOU0tAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJPSURBVHhe7ZjLjYMwEEDTE/WkhHBMGyg9pADSB1KUMlZKD15/8diYwGb3spn3pJFgYjA5vJmBw/F4NC7O57OZpokgiA+P5PqhThAEoSMOBgBUgvwASkF+AKUgP4BSkB9AKcgPoBTkB1AK8gMoBfkBlIL8AEpBfgClID+AUnbJ/7z1puu6OfrbM/7yiqcZT50Z7vH0p3yNpo/7vX0PAFhlU/4g/mAe8dzYo2FXAfil/PfBdJe8KwD8LZvyPy62+1YS+oJwGq3e/sxLPk8GVX6W38m8WGMRHb7rejN+2Vxr7cr17vn6U5hMUkGSk4osUv6/NPIAGtke+5N0UlhBWRzCVBCEF/J7waPYMR+uaRSIdC93nPaMBULeN63z+8tnk9f55wn7FgWruB+ATnZ+8IvCuSLwohCUMufjclKwzIJW8kukxIXQFnceX0XqycRPAouuHvappwC6P2hmp/wlhXDF2B6iKX+1Jn9HCNNCmbMI4RfFw++Z5c8SLyUPhPziGUTRANDGhvxOmjSuC6rOXcvXlH+PaGvdXh473HlT/rWOLp8LABybnX/RdaNIQeZKfi/lUv7ynT9ODv6e+Z3c465PRUIKv/HOL2Uvnzd/g2jll0UCQA+7xn4vjhuTU8guHoVP+Sxj1W3lunq8X8vLoiPXiXyr0/viEtfK32S++A8ACnnrnR8A/j/ID6AU5AdQCvIDKAX5AZSC/ABKQX4ApSA/gFKQH0ApyA+gFOQHUAryAyhlln+aJoIgPjyk67P81+uVIAhFUcgvKwRBEJ8ck/kG7hfsCD3c85gAAAAASUVORK5CYII=" InformativeScreenshot="e703d600f3749b8a4ca8bb170e76de2c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Customers | Apptivo' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <uix:Target DesignTimeRectangle="263, 330, 51, 34" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='cssTableCell' parentid='fixedLeftBodyRows' tableRow='2' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='cssTableCell' parentid='fixedLeftBodyRows' type='' tag='DIV' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADcAAAAmCAYAAABgUQN4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACmSURBVGhD7dbBCcAgDIXhLuoabuJKnhzBJZwgbQSLB6GtIuWFF/hvwfbDi4dck1Iyk/denHM1c7i+G1dKMZFa2hCHFHGoEYcacagRh9p2XM5ZQgj1EfuU7un+6JyZtuP0h2OM9QNPo3u6Pzpnpu04vZEvo/ujc2YibiXiuiHuZcStRFw3xL1sO870C8X02/LPiEONONSIQ4041IY4S7WpOKtjGCdyAmfxw2cv4rmfAAAAAElFTkSuQmCC" SearchSteps="Selector" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NClick ClickType="Single" DisplayName="Click 'Name'" sap:VirtualizedContainerService.HintSize="400,166" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6d10b5a-3d32-4177-bfde-820035e30d81" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.apptivo.com/app/customers.jsp#/search?searchText=uber" DesignTimeRectangle="751, 355, 272, 30" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Uber'" FullSelectorArgument="&lt;webctrl parentid='apptivo-attribute-container_cust_name_attr' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='apptivo-attribute-container_cust_name_attr' tag='DIV' type='' class='viewObject minhgt30  ' aaname='Uber' check:innerText='Uber' /&gt;" Guid="07eaaee8-e6d9-4a01-84d9-e71a60e9b243" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARQAAAAiCAYAAACeJCZ9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFXSURBVHhe7dnhjYIwGIBhd+pcsgpxE5zEOIaJzNDDUhS5OzW571fveZImAsWfb9qyG8cxG4ZhRIxdBvgjQQHCCAoQRlCAMIIChBEUIIygAGEEBQgjKEAYQQHCCAoQRlCAMK+Dchlyl7o8XOp1dT6k3B2v334D/5ugAGGCgjLkPqWcbuNwLvdn1zzs6/1p9Kd6+9TntO+m/57u74dpFtCCkKCk+5xzCcsSjvJsCcwtIsu89W+gGTFBWa1KrseuXj/HZVmtlOsSlH6aAbQkJCjrM5RtUJbtzjLK3LLlsdWB1rwOSonCNijzSuO3Fcrj+qd3K0GBJr0JSj1UXQVje/5RAnLfvrw4QymrndWWR1CgOW+CcvP8pWZ7mDpveR5fedbbn+2792eCAk36ICgAnxEUIIygAGEEBQgjKEAYQQHCCAoQRlCAMIIChBEUIIygAGEEBQgzB2XMX5sIJBruSoEuAAAAAElFTkSuQmCC" InformativeScreenshot="950dd3bd4c2043c5517395db1f7cb040.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Customers | Apptivo' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <uix:Target DesignTimeRectangle="748, 324, 68, 30" ElementType="Text" FriendlyName="'Name'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='lhiotr apptivo_ui-renderer_attribute_label control-label col-sm-4' aaname='                                            ' check:innerText='Name' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEgAAAAiCAYAAAD8gp97AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKKSURBVGhD7Za/jhJRFIf3NfYF9gXYB7Cm2AeAF8AHwJpkOwqjiZUJGxtpNCFrI41SqAU2GBNtNiHaYDXzCle+Yc/sOXeGuTNIIXBJvsz9NzecL7974SxJEhfZThQUIAoKEAUFiIICREEBjKBffxL3/HPqrl4nhu6bzTjzev0pYAS1Xqbu/GmaPa/G9sn45fqp158CRlD/feJ6tw/96w92TvdPBSMIAXKsOutjdfFikyAZu/6Yui93doNjxwhCyrYEMQ4cNcQ9fpe4m6+p+/77Yc0xYgQ9+5RmFzLFkxjuHJ7S56JGkA/rnkwT9/Zb9UW+WCxcu912/X7frVYrMzYejwvr/weMoOw4rZFUSILok5oyOWXoPTUio9VqudlsZsYOQtBovjk63DUkQhJEm8Ifvbq/kyqoK6jb7brlclkQxBhzrIHhcGjGB4NBlkDZYzKZ5Gu1ZNoyrhPbFCNIBEx/blLELxdP+hTOU68vo46gXq+XF+QLQoi0pUjSJoJELGO6eN5jH/aTOf2eiG6KEYQALmISBHK30N5ngkajUVYYX5witCDwU1RWqC+WpwhijYhkjv6uKTKC5I8hR01k8bNOmzuIS3r6Y92voI4gipF2p9PJxyhAjg9SqpKwTdB8Ps/30GhhTSgkiIuZXyNSI/996O8zQVIUxUoBWprM7yKIcT9B/0IhQYAkUkSCkEabwveZIN0XQVqCn6YmgqrENqU0QVIsCSI9Unhd9J4avyigLYJ0H/TxayLI32fX+weMII5Qnf87rNPv+fN67tAxgvxCt8FdU/Wenjt0ckEcLb/QXZF/4MeASVCkSBQUIAoKEAUFiIICREEBoqAAUVCAKChALih+yj9RUOXHub8MoGyNcFqJ0AAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Name *'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="400,227" sap2010:WorkflowViewState.IdRef="NTypeInto_14" ScopeIdentifier="a6d10b5a-3d32-4177-bfde-820035e30d81" Text="[strCompanyName]" Version="V3">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.apptivo.com/app/customers.jsp#/search?searchText=Salesforce" DesignTimeRectangle="738, 344, 263, 27" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Salesforce'" FullSelectorArgument="&lt;webctrl id='cust_name_attr' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='cust_name_attr' tag='INPUT' type='text' class='forallmore form-control input-sm ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-maxlength' aaname='Salesforce' /&gt;" Guid="bdbef0ae-eee3-44d2-8e7f-fb3b6fe4ffb2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAZQAAAAfCAYAAADAxTsPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAReSURBVHhe7Z3NTttaFEb9lLwAg07hAZgyZsxL3BnPwai3uqoKvVdVWwQpoUFKSKJTL8fbbJkf16F3Eq0lfbJ9co6d0V45/ks1W6zLdL4uN/ercjVbla93y/LlblX+u12Wf+tc/tjkYlKnXn6aPDS5MMYYs5Pp6nxb+8MDOAE34AhcgTNwBw7BJRUr13XDt591p+myfG6l8fHmofxz/VA+XC3K31cPTd5/X5T39fYm9bYxxpgdTFvn65of9R8X4ATcgCNwBc7AHTgEl1TYhYZ3f303xhhjRgeH4JKKKQuWoXEymRhjjDG/HdyBQ3BJxXkwpi40LpfLsl6vjTHGmMHgDNyBQ3BJxcUVzofRSAcREZHfAWfgDhyCSyqu2HORRaGIiMgYQig4BJdU3AbGlXuFIiIiYwih4BBcUnFvMbeDKZRH9vb22jUREXmJEAoOwSWNULjHWKE8olBERIYJoeCQRig8BbmNUM7OzprCG2F7iPl8Xo6Pj8v5+XnbMo4Yz/FOT0/b1j+PQhERGSYLBZdUPFrP05BjhII8Dg8Py+3tbbPNku0hqbxVKByH8XHc/wuFIiIyTAgFh+CSitu9eMR+jFCYHfRnCMiEYo808kyC9NtDKJeXl2V/f7/pkwXVH8++Q1psM4axL41n/wcHB81ncezcN9qibxwn2lkXEZHX6YRSOwSXbCWUKMK5MGeycEIEjAlRsJ7bgf6xPwSSx9POkhwdHTVyiPExK8rj2WdIB/I4oC/j2EY8LOO78ZlCEREZ5olQeLMkLwMbIxSIAtz/dd8n+vWFQvKsgqJO0Wc7CyWTxZD7Q5ZDf99sP/f9OE5uj34KRURkmEehcA3lDULpgwBCAhT1OL0UoVj3hZI/J3lWETMFQl/IQqEtS6P/WRZFXxwB7fn4hH2yFBGR1/kjQjk5OekKfxBFfDqdNkuKNWSJ9IXyXJHvk0WR18lrM5S875eO9dJMSKGIiAzzRCjbXEPp/+IPUVCcYz2EQjGnQLOMz1hHBMwGWAf6x4yD/cR4thnDkmS50D/6MSa+U18gWTZAX/JcO+MUiojIMI9CecNFeaCQU3gjFOMgJBLthP5ZKEAhj1Nj/YvoceqJRP8sFMjjQ0bQFwrk75Q/y+2xD9ZFROR1nghlm+dQdh2FIiIyTCeUeA5l2yfldxmFIiIyTAile1Led3k9RaGIiAyThdK9HNK3DYuIyFhCKN3bhv0/FBER2YYQSvd/KP5jo4iIbEMIpfvHRv9TXkREtiGEgkOa/5T/ercsn38sFYqIiIwihIJDcEl1NVuVL1OFIiIi4wih4BBcUt3cr8q3nxuhGGOMMWODQ3BJNZ2vy3UrFSzD1IXzYVxk4co9t4NxjzHhaUgesd9k81JJY4wxu5a2ztc1P+o/LsAJuAFH4AqcgTtwCC6pZot1s4JdmLJwHoyLK1yx5zYw7i0mPAXJo/XsiPBmSWOMMbuXrs63tT88gBNwA47AFTgDd+CQ2WJdfgE9P2S4BHTG3QAAAABJRU5ErkJggg==" InformativeScreenshot="75a9cfb46df72d288b56c3fd1d070240.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Customers | Apptivo' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <uix:Target DesignTimeRectangle="738, 314, 82, 30" ElementType="Text" FriendlyName="'Name *'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='lhiotr apptivo_ui-renderer_attribute_label control-label col-sm-4' aaname='                                                            ' check:innerText='Name&amp;#xD;&amp;#xA;*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFYAAAAiCAYAAADF5S4gAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAO1SURBVGhD7ZexbtNQFIb9HDwBD1DBC7BVnWDr0MKC1KWwdahg7EBhqMQCdGIBFpStqANdWqYwlYJQFaAVIk1bu2niJHbsHM5/7RNdu3HqUEcFcX/p7z3n2LWUz7+vE4uMxiIDdkwyYMckA3ZMMmDHpATYeqdHzz926Nab04TvlBpqjuNG+ZQAe+3FCV15Yqv1JgPVV8yv82qUTwmwD967dG+tGXdEy1utuIqO6b3RcCXAApw8/rf58b/61FGJldnyhzZt14L4bKNhSoAFzKzEYg5jSwDw+++a9PqTR3v1MD7DSFcC7LNyR72oAA0JxZ6KVXq8wAA2bZz3cMOltV3//Bfc6irRxkbcDNbKygpNTExQuVyOJ9FsdnaWHMeJJ3+3EmDx2MOSQkkseqR0ENRBHqjDQ6LJSaKFBaK5uWjNkIBdXFykdrvdn/2zYF9teyqd2EuRQEksagC78bLeh5/lTLCQ6xJNT0epHSIBC5dKpf5MB4u5nDM1NUWVSkXdBNwMeGlpqX9sfX1drehxHRGuhWvKdfQn5KJKgBVwm/tdlVJ8E8CKHsCwnqehYJFSbAOyZggfHiBmZmb6MHWwgDg/P69qgQOYqLEKaBi1/J/cDADUbwJqHJP/K0IJsACHFxQSC8veibqQxOaUQETSAAIfOp1YSE+tDlZgCXRJKYAKWIGOa0DSF5XaBFj5QYAtQSDj6xVq7LF4eW1xPcxFggUY1PjAenoFUBrmKGClTltAX1RnEosXFt7uSKl8d0V/GYkFGEkSPrQOW2r9kR4FbDqxRetMYmHARWqRWMBGDWCXkVjpdbCAASiAI7BGBavfENT6NYvQwMQKJCQWaRVgeX1RpcEKIJlJD0j6NlGtVnODhfTr6PMilACLRz3P91Wcpyt93CgFNg0oy9hLdaWPG2lgsQUkAD0+ZmMd3Y82W9TjX7b/sxXYHldqgNq4EFtSQH3AYsyM/8iWQAz5T8hrwH+witEbj26LrUEk6nLRTaxEftAzHtEKbASRBzAPPXanmzJm7DaTjozaOMuWAhqDxKDlh+T6PeWm16OGF6pV1Z1Q9cbn20I6ATQCGdIpwztpR3ZaIdmtgGyu1ap64zy2AFWAOgpgSEduSLVmQAeNgKqxf512Y6NmY2acaQtQ6wz12A0UTMD7yeD2T7q0x/7uRP5ms3mt2L7yN+OhtgD1iKFWGwy03qUfMbzdY5++Hvn0pebR55qvvHPg0Q73kbk3zrSFpALq3bcHxgXawuOPpKKxbdu4ENv0G3dMw862o0udAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="400,188" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_4" Shortcuts="[d(hk)][k(pgdn)][u(hk)][d(hk)][k(pgdn)][u(hk)][d(hk)][k(pgdn)][u(hk)]" Version="V3" />
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,2424" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NClick ClickType="Double" DisplayName="Double-click 'Website *'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_17" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6d10b5a-3d32-4177-bfde-820035e30d81" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://www.apptivo.com/app/customers.jsp#/search?searchText=softtek" DesignTimeRectangle="1463, 556, 400, 27" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT website_attr'" FullSelectorArgument="&lt;webctrl id='website_attr' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='website_attr' tag='INPUT' type='text' class='form-control input-sm  ' aaname='' /&gt;" Guid="808df26f-4543-4d45-bd2c-95cdcc01a519" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAZQAAAAfCAYAAADAxTsPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKGSURBVHhe7do7biJBGEXh2f8OCEhISJwQEJE4IcKZAxZABBIBGZIRNTotrlVuP5mungnmfNKvrq4XWV1V27+KJEkNGCiSpCa6QLler+Xp6cmyLMuy7i4y5DVQLpdL1ylJ0j3IDjIEXaC8vLwYKJKku5EdZAgMFEnSHzNQJElNGCiSpCYMFElSEwaKJKkJA0WS1MTgQHl4eCjb7fb2Vrr2ZDJ51zebzcrpdLr1vLdcLst6vb69fe98Pr/+NvvO5/Oy2+1uo5Kkv21woPSDgDaHO/1BX/3+kXsDpWagSNK/NzhQuCFwU+DGQC0Wi7LZbLoDPjcSwiI3Fg796XTa3WLqWwtzVqtV18dYHUCspa9ekxvK8/Nz92SMfdk/Y1mT35YkjWdwoHC4c3jzTPtwOHTBwuFOX24PtAmEHPCEBvMJANoJhHpevR7cYqiExkdz2CuBxHj2lSSNZ3Cg1Ac7lYM8Bz8HOeHCPMbrWwljucnUIQDW8t4Pi/gsUGjXoVXPkySNZ3CgIOFB5eDmSSDkmb58hkrl9sAc1kcCBYznM1luNN8FSv936r0lSe01CZQEQj5zgYOdvsfHxzchk0DoY24CBP33SNB8FSgf3WgkSeNqEigc4hzu+bQFngkFxsGz/hxFOOQTGPPSrucRDARE9mAN9VmgIL8L+rjd5DclSeNoEiioD/Hg4O/fSHLA8xmq/mM5a+v/8mJt0M6nq+xXB0ra2S/vWVPvJUkaR7NAkST93wwUSVITBookqQkDRZLUhIEiSWrCQJEkNWGgSJKaMFAkSU18GiiWZVmWdW+9CZTL5VKOx2PZ7/eWZVmW9eMiO8iQ10C5Xq9dByljWZZlWT8tsoMMKaWU37cRzDvcfar2AAAAAElFTkSuQmCC" InformativeScreenshot="b0c6e73becda2f25746dfd3879f03004.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Customers | Apptivo' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="1463, 526, 86, 30" ElementType="Text" FriendlyName="'Website *'" FullSelectorArgument="&lt;webctrl parentid='apptivo-attribute-main-container_website_attr' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='apptivo-attribute-main-container_website_attr' tag='LABEL' type='' class='lhiotr apptivo_ui-renderer_attribute_label control-label col-sm-4' aaname='                                                            ' check:innerText='Website' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFoAAAAiCAYAAADf2c6uAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJUSURBVGhD7ZixSmNBFIZ9qLyAD5AHsMsjaB+2sdg+hV3YRrSwWFLYGEFcxCpZFRELJeKykGyzKbYIQsjZ/GN+OXe8dzTm3tN4Pjhk5szMHc43w03ImjgmuGgjXLQRLtoIF21ERvS/J5HLP6vF3d/Fw5wMGdEXI5H13dVi82jxMCdDruiv58/tZcNFF5Mr+tvVIrEkLroYF21EruiN7yJb3eUjJXo8Hkuj0ZBWq7XISGjXarVXOczD/CLeMyePeN1gMJB2ux3aVWP2ZTiZTKTZbIZAm32IZvHxnCI+KlqDtXiGPuQqMRMNUFS9Xg83CYE2RMe5TqcT5vf7/TCuDwNQNA8KgbkE61PrRqNRZi0Ptmi/MjAVzULwCRmQ2u12X+TqcS09vukQxnkcoxi9Lr61FI18PJbarwwKRe/diOxeixw/PP/c+zkfS/V35hfqLdG6GBSIQobD4UvByGMc83QboE9JWhjIOyD0sUaTEp3arwwKRW+fifz4JXL+W+TwXuTgNt3/cvq2aBbHG8giKUDfIuQgSwdFaGFAiwbxWgrX62LRqf3KIPnqgMj9+c0+eXxfH5ESDXRBFAMRzLHw+IZptDAQiybM5x1QLDq1XxmYvqMBpeqi8Ik+8rx9zKEfvzN5WHqMAmPpWm5KdGq/MjAXTRG6CBYd3yjORVAQoDA8A2PxOh4mI086+/rZRfuVgbnoz4qLNsJFG5ERjT/+IXuV8D/+88mIdqrDRRvhoo1w0Ua4aCNctBEu2ggXbYSLNiKIns1m0uv1PCqMIHo6nYaOUxUi/wF03/YxFHiAYQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Website *'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,227" sap2010:WorkflowViewState.IdRef="NTypeInto_15" ScopeIdentifier="a6d10b5a-3d32-4177-bfde-820035e30d81" Text="[strWebsite]" Version="V3">
+                                <uix:NTypeInto.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://www.apptivo.com/app/customers.jsp#/search?searchText=softtek" DesignTimeRectangle="1463, 678, 400, 27" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl parentid='apptivo-attribute-container_website_attr' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='apptivo-attribute-container_website_attr' tag='INPUT' type='text' class='form-control input-sm  ng-pristine ng-untouched ng-valid ng-empty' aaname='' /&gt;" Guid="a0215b8f-b5d9-4269-b117-63032ee667b2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAZQAAAAfCAYAAADAxTsPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKGSURBVHhe7do7biJBGEXh2f8OCEhISJwQEJE4IcKZAxZABBIBGZIRNTotrlVuP5mungnmfNKvrq4XWV1V27+KJEkNGCiSpCa6QLler+Xp6cmyLMuy7i4y5DVQLpdL1ylJ0j3IDjIEXaC8vLwYKJKku5EdZAgMFEnSHzNQJElNGCiSpCYMFElSEwaKJKkJA0WS1MTgQHl4eCjb7fb2Vrr2ZDJ51zebzcrpdLr1vLdcLst6vb69fe98Pr/+NvvO5/Oy2+1uo5Kkv21woPSDgDaHO/1BX/3+kXsDpWagSNK/NzhQuCFwU+DGQC0Wi7LZbLoDPjcSwiI3Fg796XTa3WLqWwtzVqtV18dYHUCspa9ekxvK8/Nz92SMfdk/Y1mT35YkjWdwoHC4c3jzTPtwOHTBwuFOX24PtAmEHPCEBvMJANoJhHpevR7cYqiExkdz2CuBxHj2lSSNZ3Cg1Ac7lYM8Bz8HOeHCPMbrWwljucnUIQDW8t4Pi/gsUGjXoVXPkySNZ3CgIOFB5eDmSSDkmb58hkrl9sAc1kcCBYznM1luNN8FSv936r0lSe01CZQEQj5zgYOdvsfHxzchk0DoY24CBP33SNB8FSgf3WgkSeNqEigc4hzu+bQFngkFxsGz/hxFOOQTGPPSrucRDARE9mAN9VmgIL8L+rjd5DclSeNoEiioD/Hg4O/fSHLA8xmq/mM5a+v/8mJt0M6nq+xXB0ra2S/vWVPvJUkaR7NAkST93wwUSVITBookqQkDRZLUhIEiSWrCQJEkNWGgSJKaMFAkSU18GiiWZVmWdW+9CZTL5VKOx2PZ7/eWZVmW9eMiO8iQ10C5Xq9dByljWZZlWT8tsoMMKaWU37cRzDvcfar2AAAAAElFTkSuQmCC" InformativeScreenshot="240a40bb872b4ba37aaf4029782d0151.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Customers | Apptivo' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="1463, 648, 86, 30" ElementType="Text" FriendlyName="'Website *'" FullSelectorArgument="&lt;webctrl parentid='apptivo-attribute-main-container_website_attr' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='apptivo-attribute-main-container_website_attr' tag='LABEL' type='' class='lhiotr apptivo_ui-renderer_attribute_label control-label col-sm-4' aaname='                                                            ' check:innerText='Website' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFoAAAAiCAYAAADf2c6uAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJUSURBVGhD7ZixSmNBFIZ9qLyAD5AHsMsjaB+2sdg+hV3YRrSwWFLYGEFcxCpZFRELJeKykGyzKbYIQsjZ/GN+OXe8dzTm3tN4Pjhk5szMHc43w03ImjgmuGgjXLQRLtoIF21ERvS/J5HLP6vF3d/Fw5wMGdEXI5H13dVi82jxMCdDruiv58/tZcNFF5Mr+tvVIrEkLroYF21EruiN7yJb3eUjJXo8Hkuj0ZBWq7XISGjXarVXOczD/CLeMyePeN1gMJB2ux3aVWP2ZTiZTKTZbIZAm32IZvHxnCI+KlqDtXiGPuQqMRMNUFS9Xg83CYE2RMe5TqcT5vf7/TCuDwNQNA8KgbkE61PrRqNRZi0Ptmi/MjAVzULwCRmQ2u12X+TqcS09vukQxnkcoxi9Lr61FI18PJbarwwKRe/diOxeixw/PP/c+zkfS/V35hfqLdG6GBSIQobD4UvByGMc83QboE9JWhjIOyD0sUaTEp3arwwKRW+fifz4JXL+W+TwXuTgNt3/cvq2aBbHG8giKUDfIuQgSwdFaGFAiwbxWgrX62LRqf3KIPnqgMj9+c0+eXxfH5ESDXRBFAMRzLHw+IZptDAQiybM5x1QLDq1XxmYvqMBpeqi8Ik+8rx9zKEfvzN5WHqMAmPpWm5KdGq/MjAXTRG6CBYd3yjORVAQoDA8A2PxOh4mI086+/rZRfuVgbnoz4qLNsJFG5ERjT/+IXuV8D/+88mIdqrDRRvhoo1w0Ua4aCNctBEu2ggXbYSLNiKIns1m0uv1PCqMIHo6nYaOUxUi/wF03/YxFHiAYQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NTypeInto.Target>
+                              </uix:NTypeInto>
+                              <uix:NClick ClickType="Double" DisplayName="Double-click 'Facebook *'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_18" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6d10b5a-3d32-4177-bfde-820035e30d81" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://www.apptivo.com/app/customers.jsp#/search?searchText=softtek" DesignTimeRectangle="1018, 888, 400, 27" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT facebook_attr'" FullSelectorArgument="&lt;webctrl id='facebook_attr' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='facebook_attr' tag='INPUT' type='text' class='form-control input-sm  ' aaname='' /&gt;" Guid="e9750ae8-077d-4a6a-8c5f-5c2b181403a8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAZQAAAAfCAYAAADAxTsPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJLSURBVHhe7dqxTiJRFAbgff83sLChsaGhsLeh0p4HsDLEgo4Ewmx+4jGXQV0HL5tN9vuSE2funDuhOr8X/TUAQAcCBYAujoFyOByGp6cnpZRSanIlQ94DZb/fHxcBYIpkRzIkjoGy2+0ECgCTJTuSISFQALiYQAGgC4ECQBcCBYAuBAoAXfw4UJbL5XBzc3NWq9XqraOP7XY7zOfzbu/t/T6A/12XQMlgzoC+JoEC8G+7eqBkYH92cmlPN7ku9/f3Z+sVAA8PD8Pt7e3Znufn5/f12Ww2bDabtyenn6E+6zhQ8jP78x4AprtqoGQ4Z7jXkG57M8DrOsP/7u7u2Nf2VEiktwKgwqJ9d+5zXQGTQPrqHXle11lvPwsAl+kSKPXbf1UN9rF2cGeoj/tqyLfr1ffVs4RGAqlOJW3YjMMi93m2Xq+P6znxtHsBuMxVTyiRod+GTXozvMfhEBUabX9qfKIoFSgVEhUK+fnRiScqfCpQUovF4uS9AEx31UAZD/rcV2+FQeuj0Cj1rPa09z85oeR+vB+A6f5aoFQAVG+7L8/Tl/6P1rM23t+GRtsXCau2709/Q6k9tR+A6a4aKDW087VVhvrj4+PJSSBDvL7Waod5u57rqHe1/+VVYRAVHFmvECvpq/fVZx0HSvrrazIApvtxoABACBQAuhAoAHQhUADoQqAA0IVAAaALgQJAFwIFgC4ECgBdfBooSiml1NQ6CZT9fj+8vr4OLy8vSiml1Lcr2ZEMeQ+Uw+FwXEjKKKWUUt+tZEcyZBiG4TeedrKav0bzvgAAAABJRU5ErkJggg==" InformativeScreenshot="ee0f9ef5d1fab81394dd1866fd562bbe.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Customers | Apptivo' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="1018, 858, 96, 30" ElementType="Text" FriendlyName="'Facebook *'" FullSelectorArgument="&lt;webctrl parentid='apptivo-attribute-main-container_facebook_attr' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='apptivo-attribute-main-container_facebook_attr' tag='LABEL' type='' class='lhiotr apptivo_ui-renderer_attribute_label control-label col-sm-4' aaname='                                                            ' check:innerText='Facebook' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGQAAAAiCAYAAACp43wlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKWSURBVGhD7Za/ixNBFMf9o/JPWKSzs0ga6wgWNgEFixSHTQq5RgvPwsJfKcTi4ARREE2KtTAiXNBCiN5B4PAuImvG+475hreTS9xk5rwHvg8MYee9ebP7PplNzjlDFSZEGSZEGSZEGSZEGQUhef4rehhxFIQcjX+68xdvrT2uXH80rWSsiwlRxlpCLly67TbvvnRbD974Ub+85edNSDwrC4GM3U970xV/uHrjiY+ZkHhWFnJzc2ea7dz2iw/u3sO3pU9Ip9NxlUqlMKrVqhsMBtOMdKAmamPPlJxWXbKyEAgAu5/352JlhJyWgJD/Tsi791/mYrFCEF90ctrt9izWbDbdeDz286PRyNXr9Vms1+v5eTau1Wr5z3AdWFQTyHtBfewDpBDuLeOxlBaCV1V2LGH47cDnfj/84a8xmBMjBHONRsM/GB+UTcI6PrRsCGLIkXmszzzGIArNRQ6ADNbkfpgDsk64h9wf+cxLRWkhPBknwZx1fkPYBCJz0AQ0C59hHpDNkddofhiTjR0OhwUBAHnI7/f7szysAZQp6/IeeSJTUVoI/klBCl5V4Ovegb/GyWFOzAnhQ6MRlLCoeYRrwoF9lglB02UM8N6yLJvbb5kQ1KO4FKj5DUED+AqRzZNywgcPmy5ZJiTFCcFarOF8KtQIkTE2gE2RMfm+l00O89g4SmZN5AD5BZA1gawT7sG6yOE6xlKgRggfDk1DTq1WmzUMoFmISVFArsPgt5WNk/+y2HAia4Yx3Ctjcj8pBFB0qlPyT4UYf8eEKGNOyLWNp0vHnfuv3fNXH93jZ9mJcSOOghDj7DEhyjAhyjAhyjAhyjAhyjAhyjAhyjAhyjAhyvBCJpOJ63a7NhQMLyTPc39hnDXO/QYpsarzJsl6DQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Facebook *'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,227" sap2010:WorkflowViewState.IdRef="NTypeInto_16" ScopeIdentifier="a6d10b5a-3d32-4177-bfde-820035e30d81" Text="[strFacebook]" Version="V3">
+                                <uix:NTypeInto.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://www.apptivo.com/app/customers.jsp#/search?searchText=softtek" DesignTimeRectangle="1018, 933, 400, 27" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl parentid='apptivo-attribute-container_facebook_attr' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='apptivo-attribute-container_facebook_attr' tag='INPUT' type='text' class='form-control input-sm  ng-pristine ng-untouched ng-valid ng-empty' aaname='' /&gt;" Guid="5bf61e8f-0180-47ab-8465-c31093df585a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAZQAAAAfCAYAAADAxTsPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJLSURBVHhe7dqxTiJRFAbgff83sLChsaGhsLeh0p4HsDLEgo4Ewmx+4jGXQV0HL5tN9vuSE2funDuhOr8X/TUAQAcCBYAujoFyOByGp6cnpZRSanIlQ94DZb/fHxcBYIpkRzIkjoGy2+0ECgCTJTuSISFQALiYQAGgC4ECQBcCBYAuBAoAXfw4UJbL5XBzc3NWq9XqraOP7XY7zOfzbu/t/T6A/12XQMlgzoC+JoEC8G+7eqBkYH92cmlPN7ku9/f3Z+sVAA8PD8Pt7e3Znufn5/f12Ww2bDabtyenn6E+6zhQ8jP78x4AprtqoGQ4Z7jXkG57M8DrOsP/7u7u2Nf2VEiktwKgwqJ9d+5zXQGTQPrqHXle11lvPwsAl+kSKPXbf1UN9rF2cGeoj/tqyLfr1ffVs4RGAqlOJW3YjMMi93m2Xq+P6znxtHsBuMxVTyiRod+GTXozvMfhEBUabX9qfKIoFSgVEhUK+fnRiScqfCpQUovF4uS9AEx31UAZD/rcV2+FQeuj0Cj1rPa09z85oeR+vB+A6f5aoFQAVG+7L8/Tl/6P1rM23t+GRtsXCau2709/Q6k9tR+A6a4aKDW087VVhvrj4+PJSSBDvL7Waod5u57rqHe1/+VVYRAVHFmvECvpq/fVZx0HSvrrazIApvtxoABACBQAuhAoAHQhUADoQqAA0IVAAaALgQJAFwIFgC4ECgBdfBooSiml1NQ6CZT9fj+8vr4OLy8vSiml1Lcr2ZEMeQ+Uw+FwXEjKKKWUUt+tZEcyZBiG4TeedrKav0bzvgAAAABJRU5ErkJggg==" InformativeScreenshot="4dfa0bc972c12467f88d41b3b8c71abb.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Customers | Apptivo' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="1018, 903, 96, 30" ElementType="Text" FriendlyName="'Facebook *'" FullSelectorArgument="&lt;webctrl parentid='apptivo-attribute-main-container_facebook_attr' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='apptivo-attribute-main-container_facebook_attr' tag='LABEL' type='' class='lhiotr apptivo_ui-renderer_attribute_label control-label col-sm-4' aaname='                                                            ' check:innerText='Facebook' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGQAAAAiCAYAAACp43wlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKWSURBVGhD7Za/ixNBFMf9o/JPWKSzs0ga6wgWNgEFixSHTQq5RgvPwsJfKcTi4ARREE2KtTAiXNBCiN5B4PAuImvG+475hreTS9xk5rwHvg8MYee9ebP7PplNzjlDFSZEGSZEGSZEGSZEGQUhef4rehhxFIQcjX+68xdvrT2uXH80rWSsiwlRxlpCLly67TbvvnRbD974Ub+85edNSDwrC4GM3U970xV/uHrjiY+ZkHhWFnJzc2ea7dz2iw/u3sO3pU9Ip9NxlUqlMKrVqhsMBtOMdKAmamPPlJxWXbKyEAgAu5/352JlhJyWgJD/Tsi791/mYrFCEF90ctrt9izWbDbdeDz286PRyNXr9Vms1+v5eTau1Wr5z3AdWFQTyHtBfewDpBDuLeOxlBaCV1V2LGH47cDnfj/84a8xmBMjBHONRsM/GB+UTcI6PrRsCGLIkXmszzzGIArNRQ6ADNbkfpgDsk64h9wf+cxLRWkhPBknwZx1fkPYBCJz0AQ0C59hHpDNkddofhiTjR0OhwUBAHnI7/f7szysAZQp6/IeeSJTUVoI/klBCl5V4Ovegb/GyWFOzAnhQ6MRlLCoeYRrwoF9lglB02UM8N6yLJvbb5kQ1KO4FKj5DUED+AqRzZNywgcPmy5ZJiTFCcFarOF8KtQIkTE2gE2RMfm+l00O89g4SmZN5AD5BZA1gawT7sG6yOE6xlKgRggfDk1DTq1WmzUMoFmISVFArsPgt5WNk/+y2HAia4Yx3Ctjcj8pBFB0qlPyT4UYf8eEKGNOyLWNp0vHnfuv3fNXH93jZ9mJcSOOghDj7DEhyjAhyjAhyjAhyjAhyjAhyjAhyjAhyjAhyvBCJpOJ63a7NhQMLyTPc39hnDXO/QYpsarzJsl6DQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NTypeInto.Target>
+                              </uix:NTypeInto>
+                              <uix:NClick ClickType="Double" DisplayName="Double-click 'Twitter *'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_19" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6d10b5a-3d32-4177-bfde-820035e30d81" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://www.apptivo.com/app/customers.jsp#/search?searchText=softtek" DesignTimeRectangle="1463, 888, 400, 27" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT twitter_attr'" FullSelectorArgument="&lt;webctrl id='twitter_attr' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='twitter_attr' tag='INPUT' type='text' class='form-control input-sm  ' aaname='' /&gt;" Guid="4cfa2d36-ace0-4758-b2f4-6706a8eb9f8e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAZQAAAAfCAYAAADAxTsPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIISURBVHhe7dgxTyJBHMbh+/7fwILGxoaGwsoCGqgIrZWVlSEWdiYQ5vJObgh6ngfe7MHlnif5Z9fdWez2l9lvBQA6EBQAuqhB2e12ZblcGmOMMSdPGrIPyna7rRcB4BRpRxoSNSibzUZQADhZ2pGGhKAA8GWCAkAXggJAF4ICQBeCAkAXfxyU8Xhcrq6ufppcf319/bHqY7mfdff39+Xx8bHc3NyUl5eXeu/29rbM5/N6DsDl67ZDSRCur6/r8SsEBeDfNlhQsutou5S2E2mBaPFYr9f1+mq1qs9mZ5PjdDrd73TaMwnM+2vtd/NbuZ7/CcB5DBaU7DTyss+xnd/d3dV7efEnEMd+8sox67I+60ajUX2mPZ+1AJzXYEF5H4vFYlFf/AlGjodB+CwobU2LS3x2D4DzGCwokRd9m0QjO5SHh4cymUzqulOC0j53tcn9w+cBOK9Bg5LzRCST8wRiNpvVoCQGpwTlo2gICsDlGDQoiUNe+C0UuZe/E4o4JiiRY9Zlfe7n//wuNgD8XYMGJRKGTCQGiUZbcxiEFopMzhOMfNpqUclvHH7uCkEBuBzdggLA/01QAOhCUADoQlAA6EJQAOhCUADoQlAA6EJQAOhCUADo4pdBMcYYY06dN0HZbrfl+fm5PD09GWOMMUdP2pGG7IOy2+3qhVTGGGOMOXbSjjSklFK+A5Uf81/i72rKAAAAAElFTkSuQmCC" InformativeScreenshot="42c399c46339b7538bc3a7937d9e5316.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Customers | Apptivo' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="1463, 858, 78, 30" ElementType="Text" FriendlyName="'Twitter *'" FullSelectorArgument="&lt;webctrl parentid='apptivo-attribute-main-container_twitter_attr' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='apptivo-attribute-main-container_twitter_attr' tag='LABEL' type='' class='lhiotr apptivo_ui-renderer_attribute_label control-label col-sm-4' aaname='                                                            ' check:innerText='Twitter' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFIAAAAiCAYAAADMDo5aAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIfSURBVGhD7ZW/TgJBEIf1EXwEH8GEB9AH4BngASxsSSjs6CjoiS9gIY2VBfQQrWxMCI0JIdHzTxDF89b8Njdm2FuSvbsJMTBfMuFmd28u+92wt2cUEVSkECpSCBUpREbkw3tcOnaRjMj+bGn2L58Kx+ntPK20W6hIIVSkEMEiD68jc3Tz4p3joSJTfCIhEUTLJDPnhopM8Yk8Gbyls8ac3c3N8eDVBgS7a9eJjKLI1Ot1U6lUMtFsNs1isUhXrqfT6dgaqAXG47Hpdrv2Grj5JsktkoMOdWWGdGSv17MCR6NROpIfejGQ68s3TSmRk/mPiEjk1WrVdhQ6Ex3q5oh2u21lTadTm1NHNxoNG5RTh6M+jfFOps6mGmVeKBEkEh8ZAlLdeR5FREIYxGGcHwGYpxxz/K/tdqCb85r8ZeAaa6QEEkEiEcTF5LPQGclxRdJGsUESgHnkWEPdiTxUJJ5B91FO9/I6UgSLPL//SFesInVG0ubwsaBfyG21Wl4Brjg3xy+ewcP3QqQIFomAzP7s+y+uHr/MQe95ZU1RkdR5tVrNbhQ5CeByQkW6HcnhdaTIJTIkiookERjHPM9pXR6RdESglu+MpDpS/BuRABukLqLN865yBSBHHRpzc97V7n1bIXIb8YqEjDKxi2REKsVQkUKoSCFUpBAqUggVKYSKFEJFCqEihVCRQqhIIazIJEnMcDjUKBFWZBzHNlGKYswvMkveI7b8yfoAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Twitter *'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,227" sap2010:WorkflowViewState.IdRef="NTypeInto_17" ScopeIdentifier="a6d10b5a-3d32-4177-bfde-820035e30d81" Text="[strTwitter]" Version="V3">
+                                <uix:NTypeInto.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://www.apptivo.com/app/customers.jsp#/search?searchText=softtek" DesignTimeRectangle="1463, 888, 400, 27" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl parentid='apptivo-attribute-container_twitter_attr' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='apptivo-attribute-container_twitter_attr' tag='INPUT' type='text' class='form-control input-sm  ng-pristine ng-untouched ng-valid ng-empty' aaname='' /&gt;" Guid="1f48613a-4e88-4b91-ac53-b4b16042d8fc" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAZQAAAAfCAYAAADAxTsPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIISURBVHhe7dgxTyJBHMbh+/7fwILGxoaGwsoCGqgIrZWVlSEWdiYQ5vJObgh6ngfe7MHlnif5Z9fdWez2l9lvBQA6EBQAuqhB2e12ZblcGmOMMSdPGrIPyna7rRcB4BRpRxoSNSibzUZQADhZ2pGGhKAA8GWCAkAXggJAF4ICQBeCAkAXfxyU8Xhcrq6ufppcf319/bHqY7mfdff39+Xx8bHc3NyUl5eXeu/29rbM5/N6DsDl67ZDSRCur6/r8SsEBeDfNlhQsutou5S2E2mBaPFYr9f1+mq1qs9mZ5PjdDrd73TaMwnM+2vtd/NbuZ7/CcB5DBaU7DTyss+xnd/d3dV7efEnEMd+8sox67I+60ajUX2mPZ+1AJzXYEF5H4vFYlFf/AlGjodB+CwobU2LS3x2D4DzGCwokRd9m0QjO5SHh4cymUzqulOC0j53tcn9w+cBOK9Bg5LzRCST8wRiNpvVoCQGpwTlo2gICsDlGDQoiUNe+C0UuZe/E4o4JiiRY9Zlfe7n//wuNgD8XYMGJRKGTCQGiUZbcxiEFopMzhOMfNpqUclvHH7uCkEBuBzdggLA/01QAOhCUADoQlAA6EJQAOhCUADoQlAA6EJQAOhCUADo4pdBMcYYY06dN0HZbrfl+fm5PD09GWOMMUdP2pGG7IOy2+3qhVTGGGOMOXbSjjSklFK+A5Uf81/i72rKAAAAAElFTkSuQmCC" InformativeScreenshot="d700d8c4d3639824bcd81734b5e7f703.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Customers | Apptivo' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="1463, 858, 78, 30" ElementType="Text" FriendlyName="'Twitter *'" FullSelectorArgument="&lt;webctrl parentid='apptivo-attribute-main-container_twitter_attr' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='apptivo-attribute-main-container_twitter_attr' tag='LABEL' type='' class='lhiotr apptivo_ui-renderer_attribute_label control-label col-sm-4' aaname='                                                            ' check:innerText='Twitter' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFIAAAAiCAYAAADMDo5aAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIfSURBVGhD7ZW/TgJBEIf1EXwEH8GEB9AH4BngASxsSSjs6CjoiS9gIY2VBfQQrWxMCI0JIdHzTxDF89b8Njdm2FuSvbsJMTBfMuFmd28u+92wt2cUEVSkECpSCBUpREbkw3tcOnaRjMj+bGn2L58Kx+ntPK20W6hIIVSkEMEiD68jc3Tz4p3joSJTfCIhEUTLJDPnhopM8Yk8Gbyls8ac3c3N8eDVBgS7a9eJjKLI1Ot1U6lUMtFsNs1isUhXrqfT6dgaqAXG47Hpdrv2Grj5JsktkoMOdWWGdGSv17MCR6NROpIfejGQ68s3TSmRk/mPiEjk1WrVdhQ6Ex3q5oh2u21lTadTm1NHNxoNG5RTh6M+jfFOps6mGmVeKBEkEh8ZAlLdeR5FREIYxGGcHwGYpxxz/K/tdqCb85r8ZeAaa6QEEkEiEcTF5LPQGclxRdJGsUESgHnkWEPdiTxUJJ5B91FO9/I6UgSLPL//SFesInVG0ubwsaBfyG21Wl4Brjg3xy+ewcP3QqQIFomAzP7s+y+uHr/MQe95ZU1RkdR5tVrNbhQ5CeByQkW6HcnhdaTIJTIkiookERjHPM9pXR6RdESglu+MpDpS/BuRABukLqLN865yBSBHHRpzc97V7n1bIXIb8YqEjDKxi2REKsVQkUKoSCFUpBAqUggVKYSKFEJFCqEihVCRQqhIIazIJEnMcDjUKBFWZBzHNlGKYswvMkveI7b8yfoAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NTypeInto.Target>
+                              </uix:NTypeInto>
+                              <uix:NClick ClickType="Double" DisplayName="Double-click 'LinkedIn *'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_20" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6d10b5a-3d32-4177-bfde-820035e30d81" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://www.apptivo.com/app/customers.jsp#/search?searchText=softtek" DesignTimeRectangle="1018, 960, 400, 27" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT linkedin_attr'" FullSelectorArgument="&lt;webctrl id='linkedin_attr' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='linkedin_attr' tag='INPUT' type='text' class='form-control input-sm  ' aaname='' /&gt;" Guid="da4cf61b-57fd-4cb1-879b-5f1b13a805b0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAZQAAAAfCAYAAADAxTsPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH7SURBVHhe7dmxbuJAFIbRff83SEFDk4aGIhV1uvR5ACoKCjqkILz6vdxoQCSCZCDR6hzpKtgeD50/4fwZAKADQQGgizEo+/1+eHl5McYYY66eNOQ9KLvdbjwJANdIO9KQGIPy9vYmKABcLe1IQ0JQAPgyQQGgC0EBoAtBAaALQQGgi28H5fn5eZjNZsN2uz2c+SfHOf/6+no4c97T09O4x1dtNpthOp2O35PPj4+Pw3K5PFwF4F5uFpRLCQrA/+Euv1DygM+DPscPDw/j1C+XNihZN5lMjq7V+jY6tXfO5++5oNSado98BuA27haUhKKikAd73VNBqegkCtHuey40dS3nEouPgtKuyx65BkB/dwtKfkXUwzzn6p7EYbFYHL2qqnsrQFHhafeN9vhcUGoPr8MAbutuQWl/fZwGJbFJVOrhX/fWq6r2lVX2qFdc7dqPglLrBAXgtn5FULLHZzFonV5rjwUF4Of8mqBE/ua4Ptea3JdfJe26upa9PvsfiqAA3EeXoJy+msqDPA/weqBfGpTTCORa7VmhiVpX3zWfzwUF4Id9OygAEIICQBeCAkAXggJAF4ICQBeCAkAXggJAF4ICQBeCAkAXHwbFGGOMuXaOgrLb7Yb1ej2sVitjjDHm4kk70pD3oOz3+/FEKmOMMcZcOmlHGjIMw/AX0rrNKBLs30YAAAAASUVORK5CYII=" InformativeScreenshot="bb60a1b275c00ed5b6968616d4e82747.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Customers | Apptivo' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="1018, 930, 89, 30" ElementType="Text" FriendlyName="'LinkedIn *'" FullSelectorArgument="&lt;webctrl parentid='apptivo-attribute-main-container_linkedin_attr' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='apptivo-attribute-main-container_linkedin_attr' tag='LABEL' type='' class='lhiotr apptivo_ui-renderer_attribute_label control-label col-sm-4' aaname='                                                            ' check:innerText='LinkedIn' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF0AAAAiCAYAAAA9BdXXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAICSURBVGhD7ZOxSgNBEIb1EXwEH0HIC/gAKXyDWNnYWNmkSJfSkMomoK0gJGksFAyIjSSoqIVIglhoEwyCmCZkzb/mx70NueWSy20088GQ2dm5Ofa7zZISEkeke0Cke0Cke2BE+lP7c6p4fv8aThLGMSJ96/hWLe9WJw6R7kake0Cke8Ap/aD+onaq94FaWIh0N6HS1wo1XYNIU2xYiHQ3zpu+cXilVvNngVpYhEmvVCoqnU6rVqs1rPyCGvbQ46JYLKpMJqM6nc6wEp1Go6FSqZT+7Xa7KpvN6kA+a5zSa822Klw0A3n54U2dD/K9Qb6SOwn0Tyo9Cv9eOoBs5gBryt08ug70x3HTTQn5fF7LMSWb0tGPff5DUMMeapRK2IvADO7b0jm/VCrpnjguiklk6TevHzpf37/U69zpY6A/TunsNfcApUAY6lgDW575Ps5gr0s69/gR+VwcRJbOPAnpvM32wSkFQVHA/jhcQ579btTCpLPX3ouDuZbOg4ZJpzhAkXZgZlTp/OD2Xhz8WenohTDU2WfOsEGNksFcS48aSUmnFFOm/Zz5Ps43ZyyMdBzUDhx8Uunjes3ZBDnrCyNd+GFE+nb5bqoQ6W5GpAuzR6R7QKR7QKR7QKR7QKR7QKR7QKR7QKR7QKR7QKR7QEvv9/uqXq9LJBRaeq/X0wshCZT6BqY0DUV/AqlVAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'LinkedIn *'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,227" sap2010:WorkflowViewState.IdRef="NTypeInto_18" ScopeIdentifier="a6d10b5a-3d32-4177-bfde-820035e30d81" Text="[strLinkedIn]" Version="V3">
+                                <uix:NTypeInto.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://www.apptivo.com/app/customers.jsp#/search?searchText=softtek" DesignTimeRectangle="1018, 960, 400, 27" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl parentid='apptivo-attribute-container_linkedin_attr' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='apptivo-attribute-container_linkedin_attr' tag='INPUT' type='text' class='form-control input-sm  ng-pristine ng-untouched ng-valid ng-empty' aaname='' /&gt;" Guid="8d95823f-e6c8-4390-ad5f-391f60d2e433" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAZQAAAAfCAYAAADAxTsPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH7SURBVHhe7dmxbuJAFIbRff83SEFDk4aGIhV1uvR5ACoKCjqkILz6vdxoQCSCZCDR6hzpKtgeD50/4fwZAKADQQGgizEo+/1+eHl5McYYY66eNOQ9KLvdbjwJANdIO9KQGIPy9vYmKABcLe1IQ0JQAPgyQQGgC0EBoAtBAaALQQGgi28H5fn5eZjNZsN2uz2c+SfHOf/6+no4c97T09O4x1dtNpthOp2O35PPj4+Pw3K5PFwF4F5uFpRLCQrA/+Euv1DygM+DPscPDw/j1C+XNihZN5lMjq7V+jY6tXfO5++5oNSado98BuA27haUhKKikAd73VNBqegkCtHuey40dS3nEouPgtKuyx65BkB/dwtKfkXUwzzn6p7EYbFYHL2qqnsrQFHhafeN9vhcUGoPr8MAbutuQWl/fZwGJbFJVOrhX/fWq6r2lVX2qFdc7dqPglLrBAXgtn5FULLHZzFonV5rjwUF4Of8mqBE/ua4Ptea3JdfJe26upa9PvsfiqAA3EeXoJy+msqDPA/weqBfGpTTCORa7VmhiVpX3zWfzwUF4Id9OygAEIICQBeCAkAXggJAF4ICQBeCAkAXggJAF4ICQBeCAkAXHwbFGGOMuXaOgrLb7Yb1ej2sVitjjDHm4kk70pD3oOz3+/FEKmOMMcZcOmlHGjIMw/AX0rrNKBLs30YAAAAASUVORK5CYII=" InformativeScreenshot="2c68b2e4e1c90f50b958a99a3dafe61d.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Customers | Apptivo' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="1018, 930, 89, 30" ElementType="Text" FriendlyName="'LinkedIn *'" FullSelectorArgument="&lt;webctrl parentid='apptivo-attribute-main-container_linkedin_attr' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='apptivo-attribute-main-container_linkedin_attr' tag='LABEL' type='' class='lhiotr apptivo_ui-renderer_attribute_label control-label col-sm-4' aaname='                                                            ' check:innerText='LinkedIn' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF0AAAAiCAYAAAA9BdXXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAICSURBVGhD7ZOxSgNBEIb1EXwEH0HIC/gAKXyDWNnYWNmkSJfSkMomoK0gJGksFAyIjSSoqIVIglhoEwyCmCZkzb/mx70NueWSy20088GQ2dm5Ofa7zZISEkeke0Cke0Cke2BE+lP7c6p4fv8aThLGMSJ96/hWLe9WJw6R7kake0Cke8Ap/aD+onaq94FaWIh0N6HS1wo1XYNIU2xYiHQ3zpu+cXilVvNngVpYhEmvVCoqnU6rVqs1rPyCGvbQ46JYLKpMJqM6nc6wEp1Go6FSqZT+7Xa7KpvN6kA+a5zSa822Klw0A3n54U2dD/K9Qb6SOwn0Tyo9Cv9eOoBs5gBryt08ug70x3HTTQn5fF7LMSWb0tGPff5DUMMeapRK2IvADO7b0jm/VCrpnjguiklk6TevHzpf37/U69zpY6A/TunsNfcApUAY6lgDW575Ps5gr0s69/gR+VwcRJbOPAnpvM32wSkFQVHA/jhcQ579btTCpLPX3ouDuZbOg4ZJpzhAkXZgZlTp/OD2Xhz8WenohTDU2WfOsEGNksFcS48aSUmnFFOm/Zz5Ps43ZyyMdBzUDhx8Uunjes3ZBDnrCyNd+GFE+nb5bqoQ6W5GpAuzR6R7QKR7QKR7QKR7QKR7QKR7QKR7QKR7QKR7QKR7QEvv9/uqXq9LJBRaeq/X0wshCZT6BqY0DUV/AqlVAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NTypeInto.Target>
+                              </uix:NTypeInto>
+                              <uix:NClick ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_21" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6d10b5a-3d32-4177-bfde-820035e30d81" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://www.apptivo.com/app/customers.jsp#/search?searchText=softtek" DesignTimeRectangle="1516, 298, 71, 31" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Save'" FullSelectorArgument="&lt;webctrl aaname='Save ' parentid='apptivo-ui-renderer_1669221378384_496_969451669221378384_973' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Save ' parentid='apptivo-ui-renderer_1669221378384_496_969451669221378384_973' tag='A' type='' class='btn btn-primary savelnk ' check:innerText='Save' /&gt;" Guid="46fe2513-aa91-4454-9f62-9b885b30678c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEsAAAAjCAYAAADc6ffdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANySURBVGhD7ZpNTxNBGMf9Sn4LQOQ7GO+esXwAQdriFY/GiuBFD7xFEk/SE8EU9aKXQkhs0iryUtrd7Y7Pf2afZXc6M2wTOUDnSf555nmZ2d3fPi0cek94K2we1ggmYcVxLO6XOl4WgU8KK4oimZx5MSDFYmYp8T6WXMAnhRWGYR6W0bPGqw4u4DME6+FS5KXJCWsmafJeeTusakgNJO9T75gsrdnHdljT1UCpkngfOyaLihCaeD3usX2yKv2R9ORVIGq7kVFP10Ljntum0WBVDblEgLLzbSAPgh0cxTIH+7AXiaUtAubYL5XUK5uh6PblVmnNdpyrW3XDdSusB+VLaugV9rXdkCYokAfBECMPg9/5qoAVOQ9w2mexmHsXiP2megHbjejafTftHZOlmqaT5utiHRamCXkY99d/DsTjl1gP7+d4bq0vQYU0lCt1OkOrr9RDWWP7QjCRB2BMY2WDvmcoRl6doV4aYjb1IjAtw9d3xY7J6kqaRT1gza72xfKnQDSOBqkwUdynetRbsp1TWuvJh2HDRHG9lIBUua4EBCBvCAhyvOY+COehxmeVN/oSKva67sPknbBA1exxQD4vJ4tg2erwDMtWZ69PDz+0qc7TwxDwseU6pgn92anjGGdiirPXvfLm+7PDWrwYSbXPgZh92xPv90LROIyGVN2kPwJJj2m/rhJBxQOx7TdpKtYBJJmmXXyfJdNEa+xptgdyz/dj9RFEXj+HDefgPP26LrlhlbUNjliCoBtrHNLb1OoAhHyNbj4Hq8D5eGA8OEBsN9SNwqOuw0IeMUDwNCKPvRIOTV96NlTg+tnYCmtq8ZwazqVnueLXcmou5RTpdeTrP+h/rqRHr2fjLJxsDDDZ9eJ6Lzdl2F9OcjD08PlbGci8j8/Xr++KHZOlmosKID4ehOLXSUzg+jkhzx9HwDLtz4oniI0fDMKa7bSrwKhJu6ozQM5BgMcmp271+vvQZZ+s52cj6dHyxRAkXdWNnnHvbdF/gzUOssKaXDilhtPUT2nxONYdk3XVlK7HPHZM1gnpr/cZXxAWa7xjO6z5PyRq8j71blgLaMwIhHNxZi3ju123wpp49ltMzJO8T70dFjVMokn3tMmYZ3+H647J8tJlheVlVg4WfiXS6XREq9Xy0gQuuV/R4PdHSICgV17gon6fJcQ/v4oqOBVAX5oAAAAASUVORK5CYII=" InformativeScreenshot="dc755f01c8fcf3242c89b7a365ddd6bb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Customers | Apptivo' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                              <uix:NClick ClickType="Single" DisplayName="Click '×'" sap:VirtualizedContainerService.HintSize="338,202" sap2010:WorkflowViewState.IdRef="NClick_22" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6d10b5a-3d32-4177-bfde-820035e30d81" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://www.apptivo.com/app/customers.jsp#/search?searchText=softtek" DesignTimeRectangle="963, 235, 12, 21" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'×'" FullSelectorArgument="&lt;webctrl aaname='Close' class='close' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Close' class='close' tag='BUTTON' type='button' check:innerText='×' /&gt;" Guid="e28898ac-63ee-4004-b00a-262d75900741" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAZCAYAAAA4/K6pAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAERSURBVDhP7ZHJioRAEETn/z9KFIVGcUdwPQjuu3+QQyRU0WXdpi9z6EOAZka8rMr6OY6DPtEX8C8BwzDQsixKDRrHkfq+1+oSsO871XVNlmVRFEUKZJ5nCoKAe03TyDokAeu6sskwDFaaplwTYVFPkoS2bdMB53nyVN/3pTkMQ+UfJ0MYXg0AXdfFEz3PkyEhwJ5hSFuigLxeLxkGEKd7hiENgCm4//t0qCgKXvTTrwAQzrJMhmzbZon/PM81iASgAYMwu67LV8HbO47DNdM0qaoqBSIBeDJsWYSnaeJ9QF3XSUgcx+zVAFgQhLtiKoKih++2baksS+kTPWUHaNz3rYSFUIfew5AC+Iu+gI8BB/0Cev3IzPcIbVkAAAAASUVORK5CYII=" InformativeScreenshot="15942ed48e6fc4551c519ba2a0cd0b29.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Customers | Apptivo' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                        <uix:Target DesignTimeRectangle="392, 454, 598, 52" FriendlyName="'Review Pricing'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='24' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='modal-footer minhgt50' tag='DIV' aaname='' check:innerText='Review Pricing Plans&amp;#xD;&amp;#xA;Upgrade' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAloAAAA4CAYAAAAl+FaSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAlOSURBVHhe7Z3Jb1RHHsf95yAumTM0i1ls017YFwNCFpvB90iQYy5ZcGCuuUckmbnkkkw4cIvCEUQUKYccBikoQcIMjBOD7XZX3rfe+3VXF728Z7/Glvrzkb6qrr3ei+T+qDBk6OLFi258fNwBAAAAQDnIreRYiBYAAABAybwlWk+fPiWEEEIIISWEGy0AAACAPoFoAQAAAPQJRAsAAACgTyBaAAAAAH0C0QIAAADoE4gWAAAAQJ9AtAAAAAD6RKVScVNTU4gWAAAAQNmMjIy4c+fOIVoAAAAAZYNoAQAAAPQJRAsAAABcvV53/7i5QHJG7ysPiBYAAAC4Wq3mBWLizpqb/Gc9K9eot6nrPel95QHRAgAAALe6uuoFQjJBukfvSe8rD6WI1vPndTc6uuiGhl60ZHb2L7e0lO9qLUbzNP+HH/I9SF5++aXm3nvv1Vtn/eKL5WxEK9q/23OUfc5e5+t1HgAAgPVgojVxp0Z6ZNNEK5QNE5BOArNZSGRGRhZ9aej8Z8782dK2WfQ6H6IFAAD9IBStyUwoKNuXW0K0hCTrww9fZ7X0NsZuaEwWYnGQTEgqfvttzbfbmmq3mx7tpT1jQdJ+tpaJXnwmjY1FJhyrqF97qe3+/ZXGmkLPY8+gseFcO7vq4RhD51Ob1n7//aWWd2PkOZ+dx9677WXrdTuHrWXtW02EAQBgc2iI1u1V0iNb8kYrFAjrkxi0kyW1h3IRr69+9WmMPlv77dtpu8Yr9jkkPIcRtmktiZD1q2572dmE+mMhVJvm2jOH5wz3sOextULCcUbYZudZWEj3bfd+lU7nCJ+h0zsCAIDBo0W07mRSQdm23DTRslsSSygS+oK3L3vRThjUp8/qCz8rWt+EQCIhyVHdxEHjP//8jY/N6SQykpD4rBov4r1UD89p44zwnKHsCJurMaHgiLhu5DmfrRmi85qwFjkHAACAMNEav72SyMQKZZdy02+04i96oS/4WB5MaOzLX+NNoEKBUeK5duuk6I/hHj6s+RstjdV6lph2ZwsJpSSs6+YqfEYjPGd4fhGupefLK1p5z6fPnd5Jp3MI7Wtz1AcAANC80UqFgnROEdHatm2bGx4eLv+PDiUS4c1QJ7EQJgbffLPSGBMKTCwKISYxmqs9tJbqkq92sqK29YhW3hutToITP/9GRSsWP+2pvTWv2zlCwjkAADDYNG60PlsmPVJEtLZv35581555t7+jJSQZ9uVvY8MbFmtTPV5fa4YSp5ssra1+zTPR0ueY+BwxWiOUkrCudU2ObJ1Hj9J+jVNbJ8EJ97XnKVO09E7y3GhpT/tvon612zgAABhcmqL1JhMKKy1xe7P/SfI9spR8tXz2n9VGe2tb9/n96r/305p/NpXt+tPSkr+/iGjt3Lmzf3/rUHX78re6/ZFVKEoilidJgQmM0Br2u0vhmkJjwrmhTMRo3npFy85kz6C+8Jxas9tNks5kzy453IhoaU1bT9HvpuU5h9q0f/gMAAAADdGal1C8cdX516lc5Ki3SFXW32j7LpWvIuuVVb/3U/pdqrKM9axeRLRK+R0tKIbJWScZBAAAeNc0b7QyoShQtt5epe3NthX35YOaW02c5/eXdV+K54t198G/V/x467d2zdN8rWOypLqV4Xjx6IlurNJ99dmwOVpD/Tqf1jasPX6eXuU7Fy27HSHtI3RzFLaFt1lh+2ZkbGwxOwkAAAwqJlrV+SV/e5OWlu51k6r575Yb/WHb3QerXowkUTf/lcjT49SSHiZSpLrJlcZan+Zrrbhu49Vue2tt7WH72FiVQmNtXnqGZb+3zSv6vNxoAQAAQCFC0RrPhCIuLXG7hCYULbWHbV9mAiS5Uf8HgfTc/zm9nTI50njNU13rmGiZWNn6JlXChMnkSftpXDjXxmtMOF999hzh+u1KC6IFAAAAhWiI1q2/CufJ87VEjupu/ttEtNq03f1xJZOcRJaSvptfvy1a1qfxmqf5qt97nAqNyrBfc7Su5rX7HM+1zzG2b5EgWgAAAFCIFtGaz6QiZylZ8VKlG62svUW0HkSi1fZGS7ddkWgl9RbRalOPRavRl+wTjm2RvWReeP6iJaIFAAAAhTDROvTpn+7QrSQFyu8zoZHEqH7r2zcNWVLdJEdt6gvH3/jqtRcu63v431SW/NxkfRurUvWGMCXjbB8TLeuzfVXaXNtHufH1az/f5nV6rk4logUAAACFaIhWIhNVCUXB0m6TDAnNzURo1G8C9Osf6S2X8DdW2XzrFyZd1h+Klo03gRKvsn9CyfptvLBxutHSvPlMzAxrt3XzlogWAAAAFKJ5o7VYeu7+uOxFSrdIcd+Nr5aaN03J525jt0oQLQAAACjEZomW8v3jlewUKSZd7cZuhSBaAAAAUAgTrbFP/u8OJaHsXCJaAAAAUIjGjdYnr9yhTyUVViZpqdNfRLQqlYqbmppCtAAAAAaZ5o3Wqywvg8/Uw3oR0Tp48KCbnp5GtAAAAAaZpmi99Lc2lJ3LIqJVrVbdzMwMogUAADDINETr4//5jGYl9bfrRURLbiXHQrQAAAAGmFi0SOcgWgAAAFAIE63Rj1640Y+TUHYsES0AAAAoRPNG64WPpMI+U2+tr1u0JiYmsmYAAAAYJJo3WqRXioiW3ArRAgAAGHBMtEi+IFoAAACQm1qt5hYWFtyzZ89Ij+g96X3lAdECAAAAV6/XvTzopoZ0j96T3lceGqJ16dIlRAsAAACgRORWciwvWpOTk1kzAAAAAGwUuZUXrcuXLyNaAAAAACUit5JjedHS/10aAAAAAMpBbuVF68qVK4gWAAAAQInIreRYQ1evXkW0AAAAAEpEbiXH8qJ15MiRrBkAAAAANorcyovWtWvX3NGjR7NmAAAAANgocis51tD169fdsWPHvHnpmkv/7kO1WnVjY2NuZGTE58CBA27//v1u3759PsPDwz579+5tZM+ePYQQ8k6ze/dut2vXLlepVNyOHTvajiGEkPUkdBzzHvMgOZHcyDxJziR3kkPJpeRUcis51tDc3JybnZ31v7Clf8F0ZmbGXbhwwZ0/f96dPXvWTU9Pu9OnT7tTp065kydPuhMnTvgcP37cRwt1imyOEELKTPizRT/MDh8+7P8atX7IheMIISRvYn8JY75j/iMXkhPJjeRIciU5k9xJDiWXklPJrebm5tzfF1JipR5RnVgAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NClick.Target>
+                                <uix:NClick.VerifyOptions>
+                                  <uix:VerifyExecutionOptions DisplayName="Verification target" Mode="Appears">
+                                    <uix:VerifyExecutionOptions.Retry>
+                                      <InArgument x:TypeArguments="x:Boolean" />
+                                    </uix:VerifyExecutionOptions.Retry>
+                                    <uix:VerifyExecutionOptions.Timeout>
+                                      <InArgument x:TypeArguments="x:Double" />
+                                    </uix:VerifyExecutionOptions.Timeout>
+                                  </uix:VerifyExecutionOptions>
+                                </uix:NClick.VerifyOptions>
+                              </uix:NClick>
+                            </Sequence>
+                          </Sequence>
+                        </ActivityAction>
+                      </uix:NApplicationCard.Body>
+                      <uix:NApplicationCard.TargetApp>
+                        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGMSURBVDhPhdJNKKVRHMdxykrKxoJiTzaazZSyUTbUaLJRitlMhkTEAhN5WVBGWXhtqEvKS4TkpayUjehasJqlRvI2ZjVJMd/v06Nu19tTn8X9n3N/55z/OQkZgzeJyEQxqlGHSnxECpyT8OrH4GdEcYkr3OIC55hBGsLZL3wMdmARTShDF4owgVnkIZz9wsegWx5FBGPYwACW8ANVSEcSnh+HQgP8Qw3cQTcK0Q+D/+IE07BHH5AKexcEtGABbncIy+jDDrZxj8fQA+zTHtxdvgHf0Il6fMEgSrCJO1zH+QMb/Q/jBrRhFcP4jik04iCsGfYpjjWPGAR8hTvohQFenf3YxRbsiWOxrHnUIKAd8zDEI5hsMw2YRDkq4lizX0GAPfDc42FxDa5wiDm4G686Vi0MDwKaMQInlsKdFMD34C7sg+/DBeTVWvOGggBfoC/R53yMU+zjDE/X5+9W9CC2PmGAL/Cp8JqfSEYWjsKaIga48u83uKJzVrCOX2HNsagBOch+h3NyQzH1m5z/STr1t/z+Oz0AAAAASUVORK5CYII=" InformativeScreenshot="5174e23f2c066c5540e47babd90f5af3.jpg" Selector="&lt;html app='chrome.exe' title='Customers | Apptivo' /&gt;" Title="Customers | Apptivo" Url="https://www.apptivo.com/app/customers.jsp#/dashboard/show-all/" />
+                      </uix:NApplicationCard.TargetApp>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+          </TryCatch.Try>
+          <TryCatch.Catches>
+            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="596,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ActivityAction x:TypeArguments="s:Exception">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                </ActivityAction.Argument>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,101" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Error" Message="[&quot;Error exception: &quot;+exception.Message]" />
+              </ActivityAction>
+            </Catch>
+            <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="596,21" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ActivityAction x:TypeArguments="ui:SelectorNotFoundException">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ui:SelectorNotFoundException" Name="exceptions" />
+                </ActivityAction.Argument>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,101" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Error" Message="[&quot;No se pudo actualizar la empresa: &quot;+strCompanyName+&quot;Debido a este error: &quot;+exceptions.Message]" />
+              </ActivityAction>
+            </Catch>
+            <Catch x:TypeArguments="ui:UiElementHasNoItemsException" sap:VirtualizedContainerService.HintSize="596,21" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ActivityAction x:TypeArguments="ui:UiElementHasNoItemsException">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ui:UiElementHasNoItemsException" Name="exceptionI" />
+                </ActivityAction.Argument>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,101" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Error" Message="[&quot;Hubo un error de UIelement: &quot;+&quot; &quot;+exceptionI.Message]" />
+              </ActivityAction>
+            </Catch>
+          </TryCatch.Catches>
+          <TryCatch.Finally>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Se ha completado la automatización&quot;]" />
+          </TryCatch.Finally>
+        </TryCatch>
+      </Sequence>
+    </Sequence>
+  </Sequence>
+</Activity>
